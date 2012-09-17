@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("Partial/_MainPageSlider")
+<style>
+    .tile {
+        width: 300px;
+        height: 150px;
+        background-color: gray;
+        float: left;
+        margin: 10px;
+        cursor: pointer;
+        opacity: 0.75;
+        color: #FFF;
+    }
+    
+    .tile:hover {
+        opacity: 1;
+    }
+    
+    .tile h2 {
+        font-size: 1.8em;
+        margin: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .tile p {
+        margin-left: 20px;
+        margin-right: 15px;
+    }
+    
+</style>
+<div style="height: 200px;">
+    <div class="tile" style="background-color: #a4c400;">
+        <h2>Web Development</h2>
+        <p>
+            We offer an integrated suite of enterprise web solutions, including web applications, 
+            website design and development, web services and etc.
+        </p>
+    </div>
+    <div class="tile" style="background-color: #d8c100;">
+        <h2>Desktop Solutions</h2>
+        <p>
+            We deliver highly scalable, secure and reliable desktop solutions for Microsoft Windows.
+        </p>
+    </div>
+    <div class="tile" style="background-color: #00aba9;">
+        <h2>Mobile Applications</h2>
+        <p>
+            Embracing the most advanced technologies and result-oriented developing 
+            environment for distinct mobile application development services.
+        </p>
+    </div>
+</div>
+@Html.Partial("_SocialPanelPartial")
