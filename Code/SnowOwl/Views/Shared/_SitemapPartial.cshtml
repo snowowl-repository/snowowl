@@ -1,0 +1,8 @@
+﻿@if (ViewBag.HideSitemap == null || !(bool)ViewBag.HideSitemap)
+{
+    <div id="sitemap-container">
+        <div class="content-wrapper">
+            @Html.MvcSiteMap().SiteMapPath()
+        </div>  
+    </div>
+}
