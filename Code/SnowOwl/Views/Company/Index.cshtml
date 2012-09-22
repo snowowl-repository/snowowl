@@ -11,46 +11,91 @@
         float: left;
         margin: 10px;
         cursor: pointer;
-        opacity: 0.75;
+        opacity: 1;
         color: #FFF;
     }
-    
-    .tile:hover {
-        opacity: 1;
-    }
-    
+
+    .tile:hover { opacity: 0.75; }
+
     .tile h2 {
         font-size: 1.8em;
         margin: 0;
         margin-top: 20px;
         margin-left: 20px;
     }
+
     .tile p {
         margin-left: 20px;
         margin-right: 15px;
     }
     
 </style>
+<script type="text/javascript">
+    function redirectTo(e) {
+        window.location.href = e;
+    }
+</script>
+
 <div style="height: 200px;">
     <div class="tile" style="background-color: #a4c400;">
-        <h2>Web Development</h2>
+        <h2 class="metro-title white">Web Development</h2>
         <p>
             We offer an integrated suite of enterprise web solutions, including web applications, 
             website design and development, web services and etc.
         </p>
     </div>
     <div class="tile" style="background-color: #d8c100;">
-        <h2>Desktop Solutions</h2>
+        <h2 class="metro-title white">Desktop Solutions</h2>
         <p>
             We deliver highly scalable, secure and reliable desktop solutions for Microsoft Windows.
         </p>
     </div>
-    <div class="tile" style="background-color: #00aba9;">
-        <h2>Mobile Applications</h2>
+    <div class="tile" style="background-color: #00aba9;" onclick=" javascript:redirectTo('@Url.Action("Mobile", "Development")')">
+        <h2 class="metro-title white">Mobile Applications</h2>
         <p>
             Embracing the most advanced technologies and result-oriented developing 
             environment for distinct mobile application development services.
         </p>
     </div>
+</div>
+
+
+
+<div class="content-section" style="height: 460px;">
+    <div class="left-section">
+        <img src="@Url.Content("~/Content/images/User-Information.png")" style="float: left; margin-right: 15px;"/>
+        <h1 class="metro-title" style="line-height: 64px; float: left;">Why work with SnowOwl?</h1>
+        <p>
+            When one speaks of progress, they envision it in terms of quantity and not quality. Here, we give high importance to quantity and a higher importance to quality. 
+            The quality of employees, work atmosphere, design, and testing, are of utmost importance at SnowOwl.
+        </p>
+        <p>
+            We regard each client not as a 'customer', but more as a partner in product development. 
+            We deliver your product the way you have envisioned it. Right from the first contact with us 
+            until the final product, we will be your companion all the way, helping at each step in the process towards bettering your business.
+        </p>
+        <p>
+            We develop your products to the highest standards using the best practices by leveraging on our affiliations with various developer programs 
+            while giving you more reliability at a lower cost. Our adherence to intellectual property rights assures you that all security-related issues are taken care of right from the beginning.
+        </p>
+    </div>
+    <div class="right-section">
+        <img src="@Url.Content("~/Content/images/Owl.png")" style="float: left; margin-right: 15px;"/>
+        <h1 class="metro-title" style="line-height: 64px; float: left;">Global Clientele</h1>
+        <p style="float: left;">
+            SnowOwl is a client-centered company whose focus is on building long-term partnerships and maintaining a high customer retention rate. 
+            Our success depends on thoroughly understanding our clients' needs and guaranteeing that their vision is met with clear terms and solid deliverables. 
+            Building mutually beneficial partnerships with clients has enabled us to leverage our involvement in developing frontline solutions to help them 
+            emerge more competitively in their chosen markets and domains. This has been central to our business since the day we were founded, and we will 
+            continue to do whatever it takes for our clients to be 100% satisfied.
+        </p>
+
+        <img src="@Url.Content("~/Content/images/Maps.png")" style="float: left; margin-right: 15px;"/>
+        <h1 class="metro-title" style="line-height: 64px; float: left;">Location</h1>
+        <p style="float: left;">
+            SnowOwl's headquarters is located in Minsk, Belarus, geographically a center of Europe. SnowOwl is ideally positioned
+            to deliver high-quality software development service to our clients worldwide.
+        </p>
+    </div> 
 </div>
 @Html.Partial("_SocialPanelPartial")

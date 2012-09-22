@@ -1,5 +1,15 @@
-body
-{
+@font-face {
+    font-family: segoe;
+    src: url('SegoeWP.ttf');
+}
+
+@font-face {
+    font-family: segoe-light;
+    src: url('SegoeWP-Light.ttf');
+}
+
+body {
+    
     margin: 0;
     padding: 0;
     font-size: .85em;
@@ -11,75 +21,49 @@ body
 header,
 footer,
 nav,
-section {
-    display: block;
-}
+section { display: block; }
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
 
-fieldset
-{
+fieldset {
     border: 1px solid #ddd;
     padding: 0 1.4em 1.4em 1.4em;
     margin: 0 0 1.5em 0;
 }
 
-legend
-{
+legend {
     font-size: 1.2em;
     font-weight: bold;
 }
 
-textarea
-{
-    min-height: 75px;
-}
+textarea { min-height: 75px; }
 
-.editor-label
-{
-    margin: 1em 0 0 0;
-}
+.editor-label { margin: 1em 0 0 0; }
 
-.editor-field
-{
-    margin: 0.5em 0 0 0;
-}
+.editor-field { margin: 0.5em 0 0 0; }
 
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
 
-.field-validation-error
-{
-    color: #ff0000;
-}
+.field-validation-error { color: #ff0000; }
 
-.field-validation-valid
-{
-    display: none;
-}
+.field-validation-valid { display: none; }
 
-.input-validation-error
-{
+.input-validation-error {
     border: 1px solid #ff0000;
     background-color: #ffeeee;
 }
 
-.validation-summary-errors
-{
+.validation-summary-errors {
     font-weight: bold;
     color: #ff0000;
 }
 
-.validation-summary-valid
-{
-    display: none;
-}
+.validation-summary-valid { display: none; }
 
-#page-wrapper {
-    min-width: 980px;
-}
+#page-wrapper { min-width: 980px; }
 
 .content-wrapper {
     margin: 0 auto;
@@ -134,11 +118,14 @@ header div#top-rect div.content-wrapper section h4 {
     position: absolute;
     margin-left: 50px;
 }
-    
-nav { float: left;height: 70px;width: 550px;}
 
-nav #menu-bar 
-{
+nav {
+    float: left;
+    height: 70px;
+    width: 550px;
+}
+
+nav #menu-bar {
     margin-top: 30px;
     padding: 0;
     height: 32px;
@@ -197,9 +184,7 @@ nav #menu-bar ul {
     z-index: 100;
 }
 
-nav #menu-bar li:hover > ul{
-    display: block;
-}
+nav #menu-bar li:hover > ul { display: block; }
 
 nav #menu-bar ul li {
     float: none;
@@ -229,22 +214,14 @@ nav #menu-bar:after {
     height: 0;
 }
 
-nav #menu-bar {
-    display: inline-block;
-}
+nav #menu-bar { display: inline-block; }
 
-html[xmlns] #menu-bar {
-    display: block;
-}
+html[xmlns] #menu-bar { display: block; }
 
-* html #menu-bar {
-    height: 1%;
-}
+* html #menu-bar { height: 1%; }
 
 
-#slides {
-    margin-bottom: 60px;
-}
+#slides { margin-bottom: 60px; }
 
 .slides_container {
     height: 640px;
@@ -258,38 +235,179 @@ html[xmlns] #menu-bar {
 }
 
 .pagination {
-	margin:26px auto 0;
-	width:100px;
+    margin: 26px auto 0;
+    width: 100px;
 }
 
 .pagination li {
-	float:left;
-	margin:0 1px;
-	list-style:none;
+    float: left;
+    margin: 0 1px;
+    list-style: none;
 }
 
 .pagination li a {
-	display:block;
-	width:12px;
-	height:0;
-	padding-top:12px;
-	background-image:url('images/pagination.png');
-	background-position:0 0;
-	float:left;
-	overflow:hidden;
+    display: block;
+    width: 12px;
+    height: 0;
+    padding-top: 12px;
+    background-image: url('images/pagination.png');
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
 }
 
-.pagination li.current a {
-	background-position:0 -12px;
+.pagination li.current a { background-position: 0 -12px; }
+
+footer { }
+
+footer div#footerMaster {
+    padding: 20px;
+    height: 100%;
+    background: #565656;
 }
-footer {}
-footer div#footerMaster { padding: 20px; height: 100%; background: #565656; }
-            footer div#footerMaster ul { margin: 0; padding: 0; list-style: none; }
-            footer div#footerMaster ul li { display: inline-block;margin-right: 20px;vertical-align: text-top;}
-            footer div#footerMaster ul li h3 { color: #DBDBDB;font-size: 1.5em;margin-bottom: 5px;}
-            footer div#footerMaster ul li ul { list-style: none; margin-left: 5px;}
-            footer div#footerMaster ul li ul li { display: block; color: #C3C0B9;margin-bottom: 3px; }
-footer div#copyright { height: 25px; background: #282828;color: #E7E5E5; }
+
+footer div#footerMaster ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer div#footerMaster ul li {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: text-top;
+}
+
+footer div#footerMaster ul li h3 {
+    color: #DBDBDB;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+footer div#footerMaster ul li ul {
+    list-style: none;
+    margin-left: 5px;
+}
+
+footer div#footerMaster ul li ul li {
+    display: block;
+    color: #C3C0B9;
+    margin-bottom: 3px;
+}
+
+footer div#copyright {
+    height: 25px;
+    background: #282828;
+    color: #E7E5E5;
+}
 
 
+section#iPhone div.top-line {
+    background-image: url('images/Apple.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #00aba9;
+}
 
+section#iPhone ul.benefits { list-style-image: url('images/list-item-teal.png') }
+
+section#Android div.top-line {
+    background-image: url('images/Android.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #A4C400;
+}
+
+section#Android ul.benefits { list-style-image: url('images/list-item-green.png') }
+
+section#WindowsPhone div.top-line {
+    background-image: url('images/Microsoft Windows.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #EA3C03;
+}
+
+section#WindowsPhone a {
+    color: #EA3C03;
+    text-decoration: none;
+}
+
+section#WindowsPhone a:hover { text-decoration: underline; }
+
+section#WindowsPhone ul.benefits { list-style-image: url('images/list-item-red.png') }
+
+section ul.benefits li h3 { vertical-align: top; }
+
+section { color: #4F4F4F; }
+    
+    
+
+.metro-title {
+    margin: 0;
+    color: #4F4F4F;
+}
+
+h1.metro-title {
+    font-family: "segoe-light";
+    font-size: 30px;
+}
+
+h2.metro-title {
+    font-family: "segoe-light";
+    font-size: 24px;
+}
+
+h3.metro-title {
+    font-family: "segoe-light";
+    font-size: 18px;
+}
+
+.white { color: #FFFFFF; }
+
+section {
+    width: 100%;
+    height: 250px;
+}
+
+.top-line {
+    width: 100%;
+    height: 64px;
+}
+
+section div.top-line h1 {
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-left: 64px;
+    line-height: 64px;
+}
+
+.content-section {
+    
+    margin-top: 20px;
+    width: 100%;
+}
+
+.left-section {
+    border-right: 1px solid #EAEAEA;
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 3px;
+    padding-right: 35px;
+    width: 45%;
+}
+.left-section p {
+    float: left;
+}
+
+.right-section {
+    float: right;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    width: 45%;
+    padding-right: 10px;
+}
+
+.content-section p { text-align: justify; }
+
+.benefits li { text-align: justify; }
