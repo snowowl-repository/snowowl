@@ -91,18 +91,23 @@
     <Content Include="Content\images\Apple.png" />
     <Content Include="Content\images\Facebook123.png" />
     <Content Include="Content\images\list-item-green.png" />
+    <Content Include="Content\images\list-item-orange.png" />
     <Content Include="Content\images\list-item-red.png" />
     <Content Include="Content\images\list-item-teal.png" />
+    <Content Include="Content\images\list-item.png" />
     <Content Include="Content\images\Maps.png" />
     <Content Include="Content\images\Microsoft Windows.png" />
     <Content Include="Content\images\newlogo.jpg" />
     <Content Include="Content\images\Owl.png" />
     <Content Include="Content\images\pagination.png" />
+    <Content Include="Content\images\separator.png" />
     <Content Include="Content\images\slide1.jpg" />
     <Content Include="Content\images\slide2.jpg" />
     <Content Include="Content\images\slide3.jpg" />
     <Content Include="Content\images\twitter123.png" />
     <Content Include="Content\images\User-Information.png" />
+    <Content Include="Content\images\Visual Studio.png" />
+    <Content Include="Content\images\Web.png" />
     <Content Include="Content\images\wp.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -271,7 +276,7 @@
     <Content Include="Views\Shared\_SocialPanelPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Development\Desktop.cshtml" />
+    <Content Include="Views\Development\Software.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Development\Web.cshtml" />

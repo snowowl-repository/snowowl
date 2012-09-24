@@ -4,7 +4,7 @@ namespace SnowOwl.Controllers
 {
     public class DevelopmentController : Controller
     {
-        public ActionResult Desktop()
+        public ActionResult Software()
         {
             return View();
         }

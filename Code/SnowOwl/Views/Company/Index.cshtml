@@ -37,20 +37,20 @@
 </script>
 
 <div style="height: 200px;">
-    <div class="tile" style="background-color: #a4c400;">
-        <h2 class="metro-title white">Web Development</h2>
+    <div class="tile" style="background-color: #00aba9;"  onclick="  javascript:redirectTo('@Url.Action("Software", "Development")')">
+        <h2 class="metro-title white">Software Development</h2>
+        <p>
+            We deliver highly scalable, secure and reliable software.
+        </p>
+    </div>
+    <div class="tile" style="background-color: #f0a30a;" onclick="  javascript:redirectTo('@Url.Action("Web", "Development")')">
+        <h2 class="metro-title white">Web Solutions</h2>
         <p>
             We offer an integrated suite of enterprise web solutions, including web applications, 
             website design and development, web services and etc.
         </p>
     </div>
-    <div class="tile" style="background-color: #d8c100;">
-        <h2 class="metro-title white">Desktop Solutions</h2>
-        <p>
-            We deliver highly scalable, secure and reliable desktop solutions for Microsoft Windows.
-        </p>
-    </div>
-    <div class="tile" style="background-color: #00aba9;" onclick=" javascript:redirectTo('@Url.Action("Mobile", "Development")')">
+    <div class="tile" style="background-color: #1ba1e2;" onclick="  javascript:redirectTo('@Url.Action("Mobile", "Development")')">
         <h2 class="metro-title white">Mobile Applications</h2>
         <p>
             Embracing the most advanced technologies and result-oriented developing 
@@ -58,9 +58,6 @@
         </p>
     </div>
 </div>
-
-
-
 <div class="content-section" style="height: 460px;">
     <div class="left-section">
         <img src="@Url.Content("~/Content/images/User-Information.png")" style="float: left; margin-right: 15px;"/>

@@ -10,12 +10,12 @@
     <mvcSiteMapNode title="Consulting" controller="Consulting" action="Index" />
     <mvcSiteMapNode title="Development" controller="Development" action="Index">
       <mvcSiteMapNode title="Web" controller="Development" action="Web" />
-      <mvcSiteMapNode title="Desktop" controller="Development" action="Desktop" />
+      <mvcSiteMapNode title="Software" controller="Development" action="Software" />
       <mvcSiteMapNode title="Mobile" controller="Development" action="Mobile" />
     </mvcSiteMapNode>
     <mvcSiteMapNode title="Portfolio" controller="Portfolio" action="Index" >
       <mvcSiteMapNode title="Web" controller="Portfolio" action="Web" />
-      <mvcSiteMapNode title="Desktop" controller="Portfolio" action="Desktop" />
+      <mvcSiteMapNode title="Software" controller="Portfolio" action="Software" />
       <mvcSiteMapNode title="Mobile" controller="Portfolio" action="Mobile" />
     </mvcSiteMapNode>
   </mvcSiteMapNode>

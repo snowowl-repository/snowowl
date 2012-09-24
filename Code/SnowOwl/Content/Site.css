@@ -332,6 +332,28 @@ section#WindowsPhone a {
     text-decoration: none;
 }
 
+section#Web div.top-line 
+{
+    background-image: url('images/Web.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #f0a30a;
+}
+section#Web ul.benefits { list-style-image: url('images/list-item-orange.png') }
+section ul.benefits { list-style-image: url('images/list-item.png') }
+
+
+section#Software div.top-line {
+    background-image: url('images/Visual Studio.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #00aba9;
+}
+
+section#Software ul.benefits {
+    list-style-image: url('images/list-item-teal.png') 
+}
+
 section#WindowsPhone a:hover { text-decoration: underline; }
 
 section#WindowsPhone ul.benefits { list-style-image: url('images/list-item-red.png') }
@@ -411,3 +433,10 @@ section div.top-line h1 {
 .content-section p { text-align: justify; }
 
 .benefits li { text-align: justify; }
+
+#sitemap-container {
+    width: 100%;
+    height: 25px;
+    background-color: #868686;
+    margin-bottom: 15px;
+}
