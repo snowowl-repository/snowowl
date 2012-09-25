@@ -8,6 +8,12 @@
         <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")" type="text/javascript"> </script>
     </head>
     <body>
+        @Html.Partial("_ContactUsDialogPartial")
+        <script type="text/javascript">
+            $(function () {
+                bindDialog($('#testbbb'));
+            });
+        </script>
         <div id="page-wrapper">
             <header>
                 <div id="top-rect">
@@ -70,7 +76,7 @@
                             </ul>
                             <h3>Sales</h3>
                             <ul>
-                                <li>sales@@snowowl.com</li>
+                                <li id="testbbb">sales@@snowowl.com</li>
                             </ul>
                         </li>
                     </ul>

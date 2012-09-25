@@ -1,0 +1,87 @@
+﻿@model SnowOwl.Models.AskForAQuoteModel
+           
+<link href="@Url.Content("~/Content/themes/base/jquery.ui.dialog.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/themes/base/jquery.ui.theme.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery-ui-1.8.23.min.js")" type="text/javascript"> </script>
+<script type="text/javascript">
+    function bindDialog(e) {
+        $(e).click(function() {
+            $('#dialog').dialog({
+                draggable: false,
+                resizable: false,
+                modal: true,
+                buttons: {
+                    "OK": function() {
+                        $(this).dialog('close');
+                    },
+                    "Cancel": function() {
+                        $(this).dialog('close');
+                    }
+                },
+                open: function() {
+                    var accentColor = '#F5753A';
+                    var backgroundColor = '#353535';
+                    var backgroundAccentColor = '#4f4f4f';
+                    var fontColor = '#FFFFFF';
+                    var dialog = $('.ui-dialog');
+                    var titlebar = $('.ui-dialog-titlebar');
+                    var titlebarclose = $('.ui-dialog-titlebar-close');
+                    var titlebarcloseicon = $('.ui-dialog-titlebar-close .ui-icon-closethick');
+                    var buttonpane = $('.ui-dialog-buttonpane');
+                    var buttons = $('.ui-dialog-buttonpane button[type=button]');
+
+                    $(titlebar).css('background', backgroundAccentColor + ' none');
+                    $(titlebar).css('border', 'none');
+
+                    $(titlebarclose).removeClass('ui-corner-all');
+                    $(titlebarclose).css('border', 'none');
+                    $(titlebarclose).css('top', '0');
+                    $(titlebarclose).css('right', '0');
+                    $(titlebarclose).css('margin', '0');
+                    $(titlebarclose).css('padding', '0');
+                    $(titlebarclose).css('width', '30px');
+                    $(titlebarclose).css('height', '30px');
+                    $(titlebarclose).css('background-color', backgroundColor);
+                    $(titlebarclose).css('background-image', 'url("@Url.Content("~/Content/images/Close.png")")');
+                    $(titlebarclose).css('background-position', '4px 3px');
+                    $(titlebarclose).hover(
+                        function() {
+                            $(this).css('background-color', accentColor);
+                            $(this).css('background-image', 'url("@Url.Content("~/Content/images/Close.png")")');
+                        },
+                        function() {
+                            $(this).css('background-color', backgroundColor);
+                            $(this).css('background-image', 'url("@Url.Content("~/Content/images/Close.png")")');
+                        });
+
+                    $(titlebarcloseicon).css('background-image', 'none');
+
+                    $(dialog).removeClass('ui-corner-all');
+                    $(dialog).css('width', '100%');
+                    $(dialog).css('left', '0');
+                    $(dialog).css('margin', '0');
+                    $(dialog).css('padding', '0');
+                    $(dialog).css('background', backgroundAccentColor);
+                    $(dialog).css('color', fontColor);
+                    $(dialog).css('border', 'none');
+
+                    $(buttonpane).css('background', backgroundAccentColor);
+                    $(buttonpane).css('border', 'none');
+
+                    $(buttons).removeClass('ui-corner-all');
+                    $(buttons).css('border', 'none');
+                    $(buttons).css('color', fontColor);
+                    $(buttons).css('background-image', 'none');
+                    $(buttons).css('background-color', backgroundColor);
+                    $(buttons).hover(
+                        function() { $(this).css('background-color', accentColor); },
+                        function() { $(this).css('background-color', backgroundColor); });
+                }
+            });
+        });
+    }
+</script>
+<div id="dialog" class="content-wrapper">
+    <!-- Contact us form here -->
+</div>

@@ -89,6 +89,7 @@
   <ItemGroup>
     <Content Include="Content\images\Android.png" />
     <Content Include="Content\images\Apple.png" />
+    <Content Include="Content\images\Close.png" />
     <Content Include="Content\images\Facebook123.png" />
     <Content Include="Content\images\list-item-green.png" />
     <Content Include="Content\images\list-item-orange.png" />
@@ -216,6 +217,7 @@
     <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
     <Content Include="Views\Company\Partial\_AskFormPartial.cshtml" />
+    <Content Include="Views\Shared\_ContactUsDialogPartial.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
