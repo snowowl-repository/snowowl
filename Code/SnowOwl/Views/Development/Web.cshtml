@@ -2,6 +2,7 @@
     ViewBag.Title = "Web";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@Html.Partial("_ContactUsDialogPartial")
 <section id="Web" style="height: 800px;">
     <div class="top-line">
         <h1 class="metro-title">Web development</h1>
@@ -75,6 +76,9 @@
                 project-based program or your own dedicated team of developers, you can be sure that we will provide them every tool to enable them to realize your vision. 
                 Please contact us to discuss your plans and learn how we might be able to help you maximize your resources. There is never any obligation until you have 
                 found the perfect fit for your needs.
+            </p>
+            <p>
+                <a href="javascript:showContactUsDialog();" class="metro-button">Ask For a Quote</a>
             </p>
         </div>
     </div>

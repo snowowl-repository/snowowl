@@ -327,11 +327,6 @@ section#WindowsPhone div.top-line {
     background-color: #EA3C03;
 }
 
-section#WindowsPhone a {
-    color: #EA3C03;
-    text-decoration: none;
-}
-
 section#Web div.top-line 
 {
     background-image: url('images/Web.png');
@@ -439,4 +434,51 @@ section div.top-line h1 {
     height: 25px;
     background-color: #868686;
     margin-bottom: 15px;
+}
+
+
+.metro-button {
+    padding: 10px;
+    background: #565656;
+    text-decoration: none;
+    color: white;
+    float: right;
+}
+
+.metro-button:hover {
+    text-decoration: none;
+    background-color: orange;
+}
+
+#Android a.metro-button:hover {
+    background-color: #A4C400;
+}
+
+#WindowsPhone a.metro-button:hover {
+    background-color: #EA3C03;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#iPhone a.metro-button:hover {
+    background-color: #00ABA9;
+}
+
+#Software ul.benefits li {
+    margin: 10px 0;
+}
+
+#Software a.metro-button:hover {
+    background-color: #00ABA9;
+}
+
+#Web ul.benefits {
+    float: left;
+}
+#Web ul.benefits li {
+    margin: 10px 0;
+}
+
+#Web a.metro-button:hover {
+    background-color: #F0A30A;
 }

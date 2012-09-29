@@ -216,8 +216,9 @@
     <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
-    <Content Include="Views\Company\Partial\_AskFormPartial.cshtml" />
+    <Content Include="Views\Shared\_AskFormPartial.cshtml" />
     <Content Include="Views\Shared\_ContactUsDialogPartial.cshtml" />
+    <Content Include="Views\Development\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
