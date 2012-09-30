@@ -1,0 +1,105 @@
+﻿#accordian
+{
+    height: 190px;
+    overflow: hidden;
+    width: 547px;
+    background-color: transparent;
+}
+#accordian > .accordian-item
+{
+    -moz-transition: opacity 0.2s ease-in-out 0s;
+    float: left;
+    opacity: 1;
+    position: relative;
+}
+#accordian > .accordian-item.active, #accordian > .accordian-item:hover
+{
+    opacity: 1 !important;
+}
+#accordian.accordianWrapper > .accordian-item
+{
+    background-color: #000000;
+    float: left;
+    margin-left: 4px;
+    max-width: 400px;
+    
+}
+#accordian > .accordian-item:first-child
+{
+    margin-left: 0 !important;
+}
+#accordian > .accordian-item > .accordian-item-tile, #accordian.accordianWrapper > .accordian-item.active > .accordian-item-tile
+{
+    display: none;
+}
+#accordian.accordianWrapper > .accordian-item > .accordian-item-tile
+{
+    -moz-transition: background 0.2s ease-in-out 0s;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    font-weight: 100;
+    height: 24px;
+    line-height: 20px;
+    padding: 160px 0 16px;
+    text-align: center;
+    width: 35px;
+    float:left;
+    opacity: 0.8;
+}
+#accordian > .accordian-item > .accordian-item-content
+{
+    height: 24px;
+    
+}
+#accordian.accordianWrapper > .accordian-item > .accordian-item-content
+{
+    display: none;
+    width: 356px;
+    margin-left:35px;
+    height:190px;
+}
+
+#accordian.accordianWrapper > .windows8-accordian-tile
+{
+    background-color: #208883;
+    background-image: url('images/windows-8-accordian-title.png');
+    background-repeat: no-repeat;
+}
+#accordian.accordianWrapper > .windows8-accordian-tile >.accordian-item-content
+{
+    background-color: #208883;
+    background-image: url('images/windows-8-metro-logo.jpg');
+    background-repeat: no-repeat;
+}
+#accordian.accordianWrapper > .web-accordian-tile
+{
+    background-color: #1664FA;
+    background-image: url('images/web-accordian-title.png');
+    background-repeat: no-repeat;
+}
+#accordian.accordianWrapper > .web-accordian-tile >.accordian-item-content
+{
+    background-color: #1664FA;
+    background-image: url('images/asp-net-logo.jpg');
+    background-repeat: no-repeat;
+}
+#accordian.accordianWrapper > .mobile-accordian-tile
+{
+    background-color: #E45300;
+    background-image: url('images/mobile-accordian-title.png');
+    background-repeat: no-repeat;
+}
+#accordian.accordianWrapper > .mobile-accordian-tile > .accordian-item-content
+{
+    background-color: #E45300;
+    background-image: url('images/wp7-logo.jpg');
+    background-repeat: no-repeat;
+}
+#accordian.accordianWrapper > .snowowl-accordian-tile
+{
+    background-color: #00FF00;
+    background-image: url('images/snowowl-accordian-title.png');
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,47 @@
+﻿<nav>
+    <ul id="menu">
+        <li onclick="javascript:window.location.href = '@Url.Action("Index", "Services")';" style="margin-left:0">
+            <div class="odd-tile">
+                <img src="@Url.Content("~/Content/images/services-logo.png")" alt="" />
+                <h2>
+                    Services</h2>
+            </div>
+        </li>
+        <li onclick="javascript:window.location.href = '@Url.Action("Index", "Technologies")';">
+            <div class="even-tile">
+                <img src="@Url.Content("~/Content/images/technologies-logo.png")" alt="technologies" />
+                <h2>
+                    Technologies</h2>
+            </div>
+        </li>
+        <li onclick="javascript:window.location.href = '@Url.Action("Index", "Portfolio")';">
+            <div class="odd-tile">
+                <img src="@Url.Content("~/Content/images/portfolio-logo.png")" alt="" />
+                <h2>
+                    Portfolio</h2>
+            </div>
+        </li>
+        <li id="aboutMenuItem" onclick="javascript:window.location.href = '@Url.Action("Index", "Solutions")';">
+            <div class="even-tile">
+                <img src="@Url.Content("~/Content/images/solutions-logo.png")" alt="" />
+                <h2>
+                    Solutions</h2>
+            </div>
+        </li>
+       
+        <li id="solutionsMenuItem" onclick="javascript:window.location.href = '@Url.Action("Index", "About")';" >
+            <div class="even-tile">
+                <img src="@Url.Content("~/Content/images/about-logo.png")" alt="" />
+                <h2>
+                    About Us</h2>
+            </div>
+        </li>
+         <li id="contactMenuItem" onclick="javascript:window.location.href = '@Url.Action("Index", "Contact")';" style="margin-right:0">
+            <div class="odd-tile">
+                <img src="@Url.Content("~/Content/images/contact-logo.png")" alt="" />
+                <h2>
+                    Contacts</h2>
+            </div>
+        </li>
+    </ul>
+</nav>

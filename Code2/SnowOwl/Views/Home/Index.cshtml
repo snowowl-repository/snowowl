@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Snow Owl - Software development company.Custom development services.";
+}
+<script src="@Url.Content("~/Scripts/slides.min.jquery.js")" type="text/javascript"> </script>
+<script type="text/javascript">
+    $(function () {
+        // Set starting slide to 1
+        var startSlide = 1;
+        // Get slide number if it exists
+        if (window.location.hash) {
+            startSlide = window.location.hash.replace('#', '');
+        }
+        // Initialize Slides
+        $('#slides').slides({
+            preload: true,
+            preloadImage: 'img/loading.gif',
+            generatePagination: true,
+            play: 5000,
+            pause: 2500,
+            hoverPause: true,
+            // Get the starting slide
+            start: startSlide,
+            animationComplete: function (current) {
+                // Set the slide number as a hash
+                window.location.hash = '#' + current;
+            }
+        });
+    });
+</script>
+<section id="banners-area">
+    <div id="slides">
+        <div class="slides_container">
+            <div class="slide" style="background-image: url('Content/images/slide2.jpg')">
+                <h1>
+                </h1>
+                <p>
+                </p>
+            </div>
+            <div class="slide" style="background-image: url('Content/images/slide1.jpg')">
+                <h1>
+                </h1>
+                <p>
+                </p>
+            </div>
+            <div class="slide" style="background-image: url('Content/images/slide3.jpg')">
+                <h1>
+                </h1>
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="company-news">
+        <div class="vertical-line">
+        </div>
+        <div class="block-info-title">
+            Snow Owl Latest News</div>
+        <div class="block-info-content">
+            We are going to fly in outsorsing world!</div>
+    </div>
+    <div id="company-blog">
+        <div class="vertical-line">
+        </div>
+        <div class="block-info-title">
+            Snow Owl Blog</div>
+        <div class="block-info-content">
+            Latest blog entry</div>
+    </div>
+</section>
+<div>
+    <div class="rectangle-tile technologies-tile">
+        <h1>
+            Best Technologies</h1>
+        <div class="block-info-content">
+            Modern set of technologies and tools make development faster, qualitative and cheaper.
+        </div>
+    </div>
+    <div style="float: left; padding: 50px 0; font-size: 30px; color: Black;">
+        +
+    </div>
+    <div class="rectangle-tile our-team-tile">
+        <h1>
+            Our Experienced Team</h1>
+        <div class="block-info-content">
+            Team of creative developers, which have the great experience in outsourcing.
+        </div>
+    </div>
+    <div style="float: left; padding: 50px 0; font-size: 30px; color: Black;">
+        =
+    </div>
+    <div class="rectangle-tile solution-tile">
+        <h1>
+            Good Solution for Your Business!</h1>
+        <div class="block-info-content">
+        </div>
+    </div>
+</div>
+<div class="large-header">
+    <span>What we offer</span></div>
+<div class="view-item">
+    <div class="view-item-image">
+        <img src="../../Content/images/mobile-development.png" alt="Mobile development" />
+    </div>
+    <div class="view-item-header">
+        Mobile Development
+    </div>
+    <div class="view-item-content">
+    </div>
+</div>
+<div class="clearing">
+</div>
+<div class="view-item">
+    <div class="view-item-image">
+        <img src="../../Content/images/html5-logo2.png" alt="HTML 5 development" />
+    </div>
+    <div class="view-item-header">
+        Rich Internet Applications with HTML 5
+    </div>
+    <div class="view-item-content">
+        HTML 5 - latest trend in web development. This powerful technology provides incredible
+        capabilities. Inspite of that technology is new, we already have some experience
+        in this area.
+    </div>
+</div>
+<div class="clearing">
+</div>
+<div class="view-item">
+    <div class="view-item-image">
+        <img src="../../Content/images/custom-software-dev.png" alt="Custom Software development" />
+    </div>
+    <div class="view-item-header">
+        High Qualitative and Reliable Custom Software
+    </div>
+    <div class="view-item-content">
+    </div>
+</div>
+<div class="clearing">
+</div>
+<div class="view-item">
+    <div class="view-item-image">
+        <img src="../../Content/images/it-consulting.png" alt="IT Consulting" />
+    </div>
+    <div class="view-item-header">
+        IT Consulting for Your Business
+    </div>
+    <div class="view-item-content">
+        Our specialists help you...
+    </div>
+</div>

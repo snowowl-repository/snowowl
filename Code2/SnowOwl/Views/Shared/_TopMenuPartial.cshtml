@@ -1,0 +1,87 @@
+﻿<nav>
+    <ul id="menu-bar">
+        <li><a href="#" class="arrow">Services</a>
+            <ul class="submenu services-submenu">
+                <li><a href="#" style="background: url('../../Content/images/engineering.png') no-repeat 0 3px;
+                    padding-left: 30px">Technology Consulting</a></li>
+                <li><a href="#" style="background: url('../../Content/images/software-development-logo.png') no-repeat 0 3px;
+                    padding-left: 30px">Software Development</a></li>
+                <li><a href="#" style="background: url('../../Content/images/mobile-development-logo.png') no-repeat 0 3px;
+                    padding-left: 30px">Mobile Development</a></li>
+                <li><a href="#" style="background: url('../../Content/images/testing-logo.png') no-repeat 0 3px;
+                    padding-left: 30px">Software Testing</a></li>
+                <li><a href="#" style="background: url('../../Content/images/support-logo.png') no-repeat 0 3px;
+                    padding-left: 30px">Maintenance & Support</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="arrow">Technologies</a>
+            <div class="submenu technologies-submenu">
+                <div class="submenu-column">
+                    <h2 style="background: url('../../Content/images/web-icon.png') no-repeat center left;">
+                        Web Tehnologies</h2>
+                    <ul>
+                        <li><a href="#">Microsoft ASP.NET</a></li>
+                        <li><a href="#">Microsoft ASP.NET MVC</a></li>
+                        <li><a href="#">Web Services</a></li>
+                        <li><a href="#">HTML 5/CSS3</a></li>
+                    </ul>
+                    <h2 style="background: url('../../Content/images/crm-icon.png') no-repeat center left;">
+                        CRM-Systems</h2>
+                    <ul>
+                        <li><a href="#">Microsoft Dynamic CRM</a></li>
+                    </ul>
+                </div>
+                <div class="submenu-column">
+                    <h2 style="background: url('../../Content/images/mobile-technologies-icon.png') no-repeat center left;">
+                        Mobile Technologies</h2>
+                    <ul>
+                        <li><a href="#">Windows Phone</a></li>
+                    </ul>
+                    <h2 style="background: url('../../Content/images/ria-icon.png') no-repeat center left;">
+                        RIA</h2>
+                    <ul>
+                        <li><a href="#">Silverlight</a></li>
+                        <li><a href="#">HTML 5</a></li>
+                    </ul>
+                    <h2 style="background: url('../../Content/images/cms-icon.png') no-repeat center left;">
+                        CMS</h2>
+                    <ul>
+                        <li><a href="#">Orchard CMS</a></li>
+                        <li><a href="#">DotNetNuke CMS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li><a href="#">Portfolio</a> </li>
+        <li><a href="#">About Us</a> </li>
+        <li><a href='@Url.Action("Index", "Contact")' class="arrow">Contact Us</a>
+            <div class="submenu contact-us-submenu">
+                <div class="submenu-column">
+                    <h2 style="background: url('../../Content/images/follow-icon.png') no-repeat center left;">
+                        Follow Us</h2>
+                    <div>
+                        <ul>
+                            <li><a href="http://facebook.com" target="_blank" class="facebook-link">Join us on Facebook</a></li>
+                            <li><a href="http://twitter.com" target="_blank" class="twitter-link">Follow us on twitter</a></li>
+                            <li><a href="http://plus.google.com" target="_blank" class="google-plus-link">Join us
+                                on Google+</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="submenu-column">
+                    <h2 style="background: url('../../Content/images/call-icon.png') no-repeat center left;">
+                        Call</h2>
+                    <ul>
+                        <li><a class="skype-link" href="skype:ask.snowowl?call">ask.snowowl</a> </li>
+                    </ul>
+                    <h2 style="background: url('../../Content/images/mail-icon.png') no-repeat center left;">
+                        Write</h2>
+                    <ul>
+                        <li>@Html.ActionLink("Online Request", "Index", "Request")</li>
+                        <li><a href="mailto:ask@snowowl.com">ask@@snowowl.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
