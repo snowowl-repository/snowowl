@@ -1,75 +1,141 @@
-body
-{
-    font-size: .85em;
-    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
-}
+/* Import Segoe Fonts
+-----------------------------------------------------------*/
+@font-face { font-family: segoe; src: url('SegoeWP.ttf');}
+@font-face { font-family: segoe-light; src: url('SegoeWP-Light.ttf');}
 
-header,
-footer,
-nav,
-section {
-    display: block;
-}
+/* Basic Tags
+-----------------------------------------------------------*/
+body {margin: 0;padding: 0;font-size: .85em;font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;color: #232323;background-color: #fff;}
+header, footer, nav, section { display: block; }
+
+/* Page Wrapping
+-----------------------------------------------------------*/
+#page-wrapper { min-width: 980px; }
+.content-wrapper {margin: 0 auto;max-width: 960px;height: 100%;}
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
-
-fieldset 
-{
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
-}
-
-legend 
-{
-    font-size:1.2em;
-    font-weight: bold;
-}
-
-textarea 
-{
-    min-height: 75px;
-}
-
-.editor-label 
-{
-    margin: 1em 0 0 0;
-}
-
-.editor-field 
-{
-    margin:0.5em 0 0 0;
-}
-
+fieldset {border: 1px solid #ddd;padding: 0 1.4em 1.4em 1.4em;margin: 0 0 1.5em 0;}
+legend {font-size: 1.2em;font-weight: bold;}
+textarea { min-height: 75px; }
+.editor-label { margin: 1em 0 0 0; }
+.editor-field { margin: 0.5em 0 0 0; }
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
-.field-validation-error
-{
-    color: #ff0000;
-}
+.field-validation-error { color: #ff0000; }
+.field-validation-valid { display: none; }
+.input-validation-error { border: 1px solid #ff0000; background-color: #ffeeee;}
+.validation-summary-errors {font-weight: bold;color: #ff0000;}
+.validation-summary-valid { display: none; }
 
-.field-validation-valid
-{
-    display: none;
-}
+/* Header Styles
+-----------------------------------------------------------*/
+header div#top-rect { height: 70px; width: 100%; background: #282828;}
+header div#top-rect div.content-wrapper section {position: relative;height: 70px;cursor: pointer;width: 270px;float: left; }
+header div#top-rect div.content-wrapper section img {float: left;max-width: 50px;max-height: 50px;top: 50%;position: absolute;margin-top: -25px;}
+header div#top-rect div.content-wrapper section h3 {margin: 0;padding: 0;color: white;width: 100px;margin-left: 50px;top: 50%;position: absolute;margin-top: -30px;font-size: 25px;}
+header div#top-rect div.content-wrapper section h4 {margin: 0;padding: 0;color: white;top: 50%;position: absolute;margin-left: 50px;}
 
-.input-validation-error
-{
-    border: 1px solid #ff0000;
-    background-color: #ffeeee;
-}
+/* Footer Styles
+-----------------------------------------------------------*/
+footer div#footerMaster { padding: 20px; height: 100%; background: #565656;}
+footer div#footerMaster ul { margin: 0; padding: 0; list-style: none;}
+footer div#footerMaster ul li { display: inline-block; margin-right: 20px; vertical-align: text-top;}
+footer div#footerMaster ul li h3 { color: #DBDBDB; font-size: 1.5em; margin-bottom: 5px;}
+footer div#footerMaster ul li ul { list-style: none; margin-left: 5px;}
+footer div#footerMaster ul li ul li {display: block; color: #C3C0B9; margin-bottom: 3px;}
+footer div#copyright { height: 25px; background: #282828; color: #E7E5E5;}
 
-.validation-summary-errors
-{
-    font-weight: bold;
-    color: #ff0000;
-}
+/* Nav Styles
+-----------------------------------------------------------*/
+nav { float: left; height: 70px; width: 550px;}
+nav #menu-bar { margin-top: 30px; padding: 0; height: 32px; line-height: 100%; background: #282828; border: none; }
+nav #menu-bar li { padding: 0px 0px 6px 0px; float: left; position: relative; list-style: none; }
+nav #menu-bar a { font-weight: bold; font-family: arial; font-style: normal; font-size: 12px; color: #E7E5E5; text-decoration: none; display: block; padding: 8px 20px 8px 20px; margin: 0; }
+nav #menu-bar .current a, #menu-bar li:hover > a { background: #F99420; color: #FFFFFF; }
+nav #menu-bar ul li:hover a, #menu-bar li:hover li a { background: none; border: none; color: #666; }
+nav #menu-bar ul a:hover { background: #F99420 !important; color: #FFFFFF !important; }
+nav #menu-bar ul { background: #282828; display: none; margin: 0; margin-top: -1px; padding: 0; border-left: 5px solid #F99420; width: 185px; position: absolute; top: 30px; left: 0;z-index: 100; }
+nav #menu-bar li:hover > ul { display: block; }
+nav #menu-bar ul li { float: none; margin: 0; padding: 0; }
+nav #menu-bar ul a { padding: 10px 0px 10px 15px; color: #FFFFFF !important; font-size: 12px; font-style: normal; font-family: arial; font-weight: normal; }
+nav #menu-bar:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+nav #menu-bar { display: inline-block; }
+html[xmlns] #menu-bar { display: block; }
+* html #menu-bar { height: 1%; }
 
-.validation-summary-valid
-{
-    display: none;
-}
+/* Section Styles
+-----------------------------------------------------------*/
+section { color: #4F4F4F; width: 100%; height: 250px;}
+section ul.benefits { list-style-image: url('images/list-item.png') }
+section ul.benefits li{text-align: justify;}	
+section ul.benefits li h3 { vertical-align: top; }
+
+/* Styles for Android Section
+-----------------------------------------------------------*/
+section#Android div.top-line {background: #A4C400 url('images/Android.png') no-repeat left;}
+section#Android ul.benefits {list-style-image: url('images/list-item-green.png') }
+section#Android a.metro-button:hover {background-color: #A4C400;}
+
+/* Styles for iPhone Section
+-----------------------------------------------------------*/
+section#iPhone div.top-line {background: #00aba9 url('images/Apple.png') no-repeat left;}
+section#iPhone ul.benefits { list-style-image: url('images/list-item-teal.png') }
+section#iPhone a.metro-button:hover {background-color: #00ABA9;}
+
+/* Styles for Windows Phone Section
+-----------------------------------------------------------*/
+section#WindowsPhone div.top-line {background: #EA3C03 url('images/Microsoft Windows.png') no-repeat left;}
+section#WindowsPhone a:hover { text-decoration: underline; }
+section#WindowsPhone ul.benefits { list-style-image: url('images/list-item-red.png'); }
+section#WindowsPhone a.metro-button:hover {background-color: #EA3C03;text-decoration: none;color: #FFFFFF;}
+
+/* Styles for Web Section
+-----------------------------------------------------------*/
+section#Web div.top-line { background: #F0A30A url('images/Web.png') no-repeat left;}
+section#Web ul.benefits { list-style-image: url('images/list-item-orange.png');float: left; }
+section#Web ul.benefits li { margin: 10px 0;}
+section#Web a.metro-button:hover {background-color: #F0A30A;}
+
+/* Styles for Software Section
+-----------------------------------------------------------*/
+section#Software div.top-line {background: #00aba9 url('images/Visual Studio.png') no-repeat left;}
+section#Software ul.benefits {list-style-image: url('images/list-item-teal.png')}
+section#Software ul.benefits li { margin: 10px 0; }
+section#Software a.metro-button:hover { background-color: #00ABA9;}
+
+/* Styles For Social Panel
+-----------------------------------------------------------*/
+.social-panell {float: right;margin-top: 25px; width:200px;}
+.social-panell ul{ list-style: none;}
+.social-panell ul li{background-color: #868686;width: 75px;height: 75px;display: inline-block;cursor: pointer; position: relative; background-repeat: no-repeat;background-position: center 5px; margin: 0;}
+.social-panell ul li:hover {background-color: #00aba9;}
+.social-panell ul li#twitter { background-image: url('images/twitter123.png'); }
+.social-panell ul li span{ color: white; position: absolute; top: 55px; left: 5px; }
+.social-panell ul li#facebook {background-image: url('images/Facebook123.png'); }
+.social-panell ul li#quote {width: 154px;}
+
+/* Metro Styles
+-----------------------------------------------------------*/
+.metro-title {margin: 0; color: #4F4F4F;}
+h1.metro-title {font-family: "segoe-light"; font-size: 30px;}
+h2.metro-title {font-family: "segoe-light"; font-size: 24px;}
+h3.metro-title {font-family: "segoe-light"; font-size: 18px;}
+
+.metro-button {padding: 10px;background: #565656;text-decoration: none;color: #FFFFFF;float: right;}
+.metro-button:hover {text-decoration: none;background-color: orange;}
+
+/* Styles For Content Layout
+-----------------------------------------------------------*/
+.top-line { width: 100%; height: 64px; }
+section div.top-line h1 { color: white; margin: 0; padding: 0; margin-left: 64px; line-height: 64px;}
+.content-section {margin-top: 20px;width: 100%;}
+.left-section {border-right: 1px solid #EAEAEA;float: left;margin-bottom: 20px; padding-left: 3px; padding-right: 35px; width: 45%;}
+.left-section p {float: left;}
+.right-section {float: right;margin-bottom: 20px;padding-left: 35px;width: 45%;padding-right: 10px;}
+.content-section p { text-align: justify; }
+
+/* ETC
+-----------------------------------------------------------*/
+.white { color: #FFFFFF; }
