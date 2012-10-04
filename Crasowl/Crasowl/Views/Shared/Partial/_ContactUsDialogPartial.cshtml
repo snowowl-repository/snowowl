@@ -48,26 +48,26 @@
 <script src="@Url.Content("~/Scripts/jquery-ui-1.8.23.min.js")" type="text/javascript"> </script>
 <script type="text/javascript">
 
-    $(function() {
-        $('.text-box').each(function() {
+    $(function () {
+        $('.text-box').each(function () {
             var name = getNameAttr($(this)) + '...';
             $(this).val(name);
         });
-        $('.text-box').focusin(function() {
+        $('.text-box').focusin(function () {
             var name = getNameAttr($(this));
             if ($.trim($(this).val()) == name + '...') {
                 $(this).val('');
             }
         });
-        $('.text-box').focusout(function() {
+        $('.text-box').focusout(function () {
             var name = getNameAttr($(this));
             var value = $.trim($(this).val());
             if (value == '' || value == name + '...') {
                 $(this).val(name + '...');
             }
         });
-        $('#postAskForm').click(function() {
-            $('.text-box').each(function() {
+        $('#postAskForm').click(function () {
+            $('.text-box').each(function () {
                 var name = getNameAttr($(this));
                 if ($.trim($(this).val()) == name + '...') {
                     $(this).val('');
@@ -159,7 +159,7 @@
     }
 
     function bindDialog(e) {
-        $(e).click(function() {
+        $(e).click(function () {
             showContactUsDialog();
         });
     }

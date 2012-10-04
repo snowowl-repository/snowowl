@@ -223,6 +223,7 @@
     <Content Include="Views\Shared\Partial\_LogoPartial.cshtml" />
     <Content Include="Views\Shared\Partial\_TopMenuPartial.cshtml" />
     <Content Include="Views\Shared\Partial\_SocialPanelPartial.cshtml" />
+    <Content Include="Views\Shared\Partial\_ContactUsDialogPartial.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
