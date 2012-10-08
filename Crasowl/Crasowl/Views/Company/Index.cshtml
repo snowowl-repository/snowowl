@@ -5,11 +5,11 @@
 <style>
     .tile
     {
-        width: 300px;
+        width: 306px;
         height: 150px;
         background-color: gray;
         float: left;
-        margin: 10px;
+        margin: 0 10px;
         cursor: pointer;
         opacity: 1;
         color: #FFF;
@@ -59,7 +59,7 @@
     </div>
 </section>
 <div style="height: 200px;">
-    <div class="tile" style="background-color: #00aba9;"  onclick="  javascript:redirectTo('@Url.Action("Software", "Development")')">
+    <div class="tile" style="background-color: #00aba9;margin-left:0;"  onclick="  javascript:redirectTo('@Url.Action("Software", "Development")')">
         <h2 class="metro-title white">
             Software Development</h2>
         <p>
@@ -74,7 +74,7 @@
             website design and development, web services and etc.
         </p>
     </div>
-    <div class="tile" style="background-color: #1ba1e2;" onclick="  javascript:redirectTo('@Url.Action("Mobile", "Development")')">
+    <div class="tile" style="background-color: #1ba1e2;margin-right:0;" onclick="  javascript:redirectTo('@Url.Action("Mobile", "Development")')">
         <h2 class="metro-title white">
             Mobile Applications</h2>
         <p>

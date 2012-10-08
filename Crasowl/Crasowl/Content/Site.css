@@ -31,7 +31,7 @@ header div#top-rect div.content-wrapper section img {float: left;max-width: 50px
 header div#top-rect div.content-wrapper section h3 {margin: 0;padding: 0;color: white;width: 100px;margin-left: 50px;top: 50%;position: absolute;margin-top: -30px;font-size: 25px;}
 header div#top-rect div.content-wrapper section h4 {margin: 0;padding: 0;color: white;top: 50%;position: absolute;margin-left: 50px;}
 
-#banners-area {height: 320px;margin:2px auto 5px auto;}
+#banners-area {height: 320px;margin:5px auto 5px auto;}
 .rectangle-tile { background-color: #F4F4F4;border: 1px solid #D6D3D1;border-right: none;
     margin-left: 5px; background-position: right 100px;background-image: url('images/submit-arrow.png'); background-repeat: no-repeat;}
 #company-news, #company-blog{float: right;height: 143px;width: 150px;}

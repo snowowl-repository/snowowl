@@ -118,6 +118,7 @@
     <Content Include="Content\images\slide2.jpg" />
     <Content Include="Content\images\slide3.jpg" />
     <Content Include="Content\images\software-development-logo.png" />
+    <Content Include="Content\images\submit-arrow.png" />
     <Content Include="Content\images\support-logo.png" />
     <Content Include="Content\images\testing-logo.png" />
     <Content Include="Content\images\twitter-icon.png" />
@@ -195,6 +196,7 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\slides.min.jquery.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -257,6 +259,7 @@
     <Content Include="Views\Shared\Partial\_TopMenuPartial.cshtml" />
     <Content Include="Views\Shared\Partial\_SocialPanelPartial.cshtml" />
     <Content Include="Views\Shared\Partial\_ContactUsDialogPartial.cshtml" />
+    <Content Include="Views\Shared\Partial\_SliderPartial.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
