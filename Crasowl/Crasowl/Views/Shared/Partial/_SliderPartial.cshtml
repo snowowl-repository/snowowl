@@ -1,0 +1,58 @@
+﻿<script src="@Url.Content("~/Scripts/slides.min.jquery.js")" type="text/javascript"> </script>
+<script type="text/javascript">
+    $(function () {
+        // Set starting slide to 1
+        var startSlide = 1;
+        // Get slide number if it exists
+        if (window.location.hash) {
+            startSlide = window.location.hash.replace('#', '');
+        }
+        // Initialize Slides
+        $('#slides').slides({
+            preload: true,
+            preloadImage: 'img/loading.gif',
+            generatePagination: true,
+            play: 5000,
+            pause: 2500,
+            hoverPause: true,
+            // Get the starting slide
+            start: startSlide,
+            animationComplete: function (current) {
+                // Set the slide number as a hash
+                window.location.hash = '#' + current;
+            }
+        });
+    });
+</script>
+<style type="text/css">
+    #slides{float:left;}
+    .slides_container, .slide {width: 800px;height: 295px;overflow: hidden;}
+    .slide {background-color: Aqua;padding: 20px 10px;display: block; }
+    .pagination {margin: 7px auto 0; width: 100px;}
+    .pagination li {float: left;margin: 0 3px;list-style: none;background-color: #F99420;}
+    .pagination li a {display: block; width: 12px;height: 0;padding-top: 12px;box-shadow: 0 0 3px black;float: left;overflow: hidden;}
+    .pagination li a:hover {box-shadow: 0 0 7px black;background-color: #E57620; }
+    .pagination li.current a {background-color: #E96207;}
+</style>
+<div id="slides">
+    <div class="slides_container">
+        <div class="slide" style="background-image: url('Content/images/slide2.jpg')">
+            <h1>
+            </h1>
+            <p>
+            </p>
+        </div>
+        <div class="slide" style="background-image: url('Content/images/slide1.jpg')">
+            <h1>
+            </h1>
+            <p>
+            </p>
+        </div>
+        <div class="slide" style="background-image: url('Content/images/slide3.jpg')">
+            <h1>
+            </h1>
+            <p>
+            </p>
+        </div>
+    </div>
+</div>
