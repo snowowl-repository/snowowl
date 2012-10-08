@@ -3,35 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    .tile
+    .quickly-navigation-tile
     {
         width: 306px;
         height: 150px;
-        background-color: gray;
-        float: left;
-        margin: 0 10px;
-        cursor: pointer;
-        opacity: 1;
-        color: #FFF;
     }
-    
-    .tile:hover
+    .quickly-navigation-tile:hover
     {
         opacity: 0.75;
-    }
-    
-    .tile h2
-    {
-        font-size: 1.8em;
-        margin: 0;
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-    
-    .tile p
-    {
-        margin-left: 20px;
-        margin-right: 15px;
     }
 </style>
 <script type="text/javascript">
@@ -59,14 +38,14 @@
     </div>
 </section>
 <div style="height: 200px;">
-    <div class="tile" style="background-color: #00aba9;margin-left:0;"  onclick="  javascript:redirectTo('@Url.Action("Software", "Development")')">
+    <div class="tile quickly-navigation-tile" style="background-color: #00aba9;margin-left:0;"  onclick="  javascript:redirectTo('@Url.Action("Software", "Development")')">
         <h2 class="metro-title white">
             Software Development</h2>
         <p>
             We deliver highly scalable, secure and reliable software.
         </p>
     </div>
-    <div class="tile" style="background-color: #f0a30a;" onclick="  javascript:redirectTo('@Url.Action("Web", "Development")')">
+    <div class="tile quickly-navigation-tile" style="background-color: #f0a30a;" onclick="  javascript:redirectTo('@Url.Action("Web", "Development")')" >
         <h2 class="metro-title white">
             Web Solutions</h2>
         <p>
@@ -74,7 +53,7 @@
             website design and development, web services and etc.
         </p>
     </div>
-    <div class="tile" style="background-color: #1ba1e2;margin-right:0;" onclick="  javascript:redirectTo('@Url.Action("Mobile", "Development")')">
+    <div class="tile quickly-navigation-tile" style="background-color: #1ba1e2;margin-right:0;" onclick="  javascript:redirectTo('@Url.Action("Mobile", "Development")')">
         <h2 class="metro-title white">
             Mobile Applications</h2>
         <p>
