@@ -1,24 +1,28 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title</title>
-        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-        <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"> </script>
-        <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")" type="text/javascript"> </script>
-    </head>
-    <body>
-        @Html.Partial("Partial/_ContactUsDialogPartial")
-        <div id="page-wrapper">
-            <header>
-                <div id="top-rect">
-                    <div class="content-wrapper">
-                        @Html.Partial("Partial/_LogoPartial")
-                        @Html.Partial("Partial/_TopMenuPartial")
-                    </div>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.2.min.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.6.2.js")" type="text/javascript"> </script>
+</head>
+<body>
+    @Html.Partial("Partial/_ContactUsDialogPartial")
+    <div id="page-wrapper">
+        <header>
+            <div id="top-rect">
+                <div class="content-wrapper">
+                    @Html.Partial("Partial/_LogoPartial")
                 </div>
-            </header>
+            </div>
+        </header>
+        <div class="clearing">
         </div>
+        <hr style="padding: 0; margin: 0; border-color: Black;" />
+        <section class="top-menu">
+            @Html.Partial("Partial/_TopMenuPartial")
+        </section>
         <div class="content-wrapper">
             @RenderBody()
         </div>
@@ -27,7 +31,8 @@
                 <div class="content-wrapper" style="height: 230px;">
                     <ul style="float: left;">
                         <li>
-                            <h3>Portfolio</h3>
+                            <h3>
+                                Portfolio</h3>
                             <ul>
                                 <li>Web Technologies</li>
                                 <li>Software Solutions</li>
@@ -35,7 +40,8 @@
                             </ul>
                         </li>
                         <li>
-                            <h3>Technologies</h3>
+                            <h3>
+                                Technologies</h3>
                             <ul>
                                 <li>Web Applications</li>
                                 <li>Web Services</li>
@@ -49,7 +55,8 @@
                             </ul>
                         </li>
                         <li>
-                            <h3>Company</h3>
+                            <h3>
+                                Company</h3>
                             <ul>
                                 <li>About us</li>
                                 <li>Partners</li>
@@ -59,12 +66,14 @@
                             </ul>
                         </li>
                         <li>
-                            <h3>Call us</h3>
+                            <h3>
+                                Call us</h3>
                             <ul>
                                 <li>Belarus: 375(29)727-98-46</li>
                                 <li>Skype: snowowl.company</li>
                             </ul>
-                            <h3>Sales</h3>
+                            <h3>
+                                Sales</h3>
                             <ul>
                                 <li onclick=" javascript:showContactUsDialog(); ">sales@@snowowl.com</li>
                             </ul>
@@ -79,5 +88,6 @@
                 </div>
             </div>
         </footer>
-    </body>
+    </div>
+</body>
 </html>

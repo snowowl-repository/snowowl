@@ -117,9 +117,14 @@
     <Content Include="Content\images\slide1.jpg" />
     <Content Include="Content\images\slide2.jpg" />
     <Content Include="Content\images\slide3.jpg" />
+    <Content Include="Content\images\software-development-logo.png" />
+    <Content Include="Content\images\support-logo.png" />
+    <Content Include="Content\images\testing-logo.png" />
+    <Content Include="Content\images\twitter-icon.png" />
     <Content Include="Content\images\twitter123.png" />
     <Content Include="Content\images\User-Information.png" />
     <Content Include="Content\images\Visual Studio.png" />
+    <Content Include="Content\images\web-icon.png" />
     <Content Include="Content\images\Web.png" />
     <Content Include="Content\images\wp.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
