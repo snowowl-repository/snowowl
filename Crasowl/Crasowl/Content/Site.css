@@ -2,7 +2,7 @@
 -----------------------------------------------------------*/
 body {margin: 0;padding: 0;font-size: .85em;font-family: "Segoe UI" ,Tahoma,Arial,Verdana,sans-serif;font-weight:normal; color: #232323;background-color: #fff;}
 header, footer, nav, section { display: block; }
-
+*{font-weight:normal;}
 /* Page Wrapping
 -----------------------------------------------------------*/
 .content-wrapper {margin: 0 auto;width:960px; max-width: 960px;height: 100%;}
@@ -122,7 +122,7 @@ h4.metro-title {font-size: 14px;}
 .metro-button:hover {text-decoration: none;background-color: orange;}
 
  .tile {background-color: gray; float: left;margin: 0 10px;cursor: pointer;opacity: 1; color: #FFF; }
- .tile h2 {font-size: 1.8em; margin: 15px 0 0 20px;}
+ .tile h2 {font-size: 1.8em; margin: 15px 0 10px 20px;}
  .tile p {margin:0 15px  0 20px}
  .slide-tile {width:150px;height:100px; }
 
