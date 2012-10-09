@@ -68,22 +68,22 @@ section ul.benefits li h3 { vertical-align: top; }
 
 /* Styles for Android Section
 -----------------------------------------------------------*/
-section#Android div.top-line {background: #A4C400 url('images/Android.png') no-repeat left;}
-section#Android ul.benefits {list-style-image: url('images/list-item-green.png') }
-section#Android a.metro-button:hover {background-color: #A4C400;}
+#android-header .top-line {background: #A4C400 url('images/Android.png') no-repeat left;}
+section#android ul.benefits {list-style-image: url('images/list-item-green.png') }
+section#android a.metro-button:hover {background-color: #A4C400;}
 
 /* Styles for iPhone Section
 -----------------------------------------------------------*/
-section#iPhone div.top-line {background: #00aba9 url('images/Apple.png') no-repeat left;}
-section#iPhone ul.benefits { list-style-image: url('images/list-item-teal.png') }
-section#iPhone a.metro-button:hover {background-color: #00ABA9;}
+#ios-header .top-line {background: #00aba9 url('images/Apple.png') no-repeat left;}
+section#ios ul.benefits { list-style-image: url('images/list-item-teal.png') }
+section#ios a.metro-button:hover {background-color: #00ABA9;}
 
 /* Styles for Windows Phone Section
 -----------------------------------------------------------*/
-section#WindowsPhone div.top-line {background: #EA3C03 url('images/Microsoft Windows.png') no-repeat left;}
-section#WindowsPhone a:hover { text-decoration: underline; }
-section#WindowsPhone ul.benefits { list-style-image: url('images/list-item-red.png'); }
-section#WindowsPhone a.metro-button:hover {background-color: #EA3C03;text-decoration: none;color: #FFFFFF;}
+#wp-header .top-line {background: #EA3C03 url('images/Microsoft Windows.png') no-repeat left;}
+section#wp a:hover { text-decoration: underline; }
+section#wp ul.benefits { list-style-image: url('images/list-item-red.png'); }
+section#wp a.metro-button:hover {background-color: #EA3C03;text-decoration: none;color: #FFFFFF;}
 
 /* Styles for Web Section
 -----------------------------------------------------------*/
@@ -133,7 +133,7 @@ h4.metro-title {font-size: 14px;}
 
 /* Styles For Content Layout
 -----------------------------------------------------------*/
-.top-line { width: 100%; height: 64px; }
+.top-line { width: 100%; }
 section div.top-line h1 { color: white; margin: 0; padding: 0; margin-left: 64px; line-height: 64px;}
 .content-section {margin-top: 20px;width: 100%;}
 .left-section {border-right: 1px solid #EAEAEA;float: left;margin-bottom: 20px; padding-left: 3px; padding-right: 35px; width: 45%;}

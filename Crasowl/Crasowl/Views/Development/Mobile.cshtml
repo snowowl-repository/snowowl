@@ -3,214 +3,335 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    .left-section p {
+    .left-section p
+    {
         float: none;
     }
+    #header
+    {
+        display: table;
+        width: 100%;
+        margin-top: 10px;
+    }
+    #header div
+    {
+        display: table-row;
+    }
+    #header div div
+    {
+        display: table-cell;
+        width: 32%;
+    }
+    .active-tab
+    {
+        margin-top: 10px;
+        opacity: 1 !important;
+    }
+    #header div div .top-line
+    {
+        padding: 10px 0 10px 60px;
+        opacity: .7;
+    }
+    #header div div .top-line:hover
+    {
+        cursor: pointer;
+        opacity: 1;
+    }
 </style>
-
-<section id="Android" style="height: 800px;">
-    <div class="top-line">
-        <h1 class="metro-title">Android</h1>
-    </div>
-    <div class="content-section">
-        <div class="left-section">
-           <h2 class="metro-title">Benefits of Android</h2>
-            <p>
-                Android is open source and a fully customizable mobile platform. Android offers a full stack: an operating system, middleware, and key mobile applications. 
-            </p>
-            <ul class="benefits">
-                <li>
-                    <h3 class="metro-title">Open Platform:</h3>
-                    <p>
-                        Built on the open Linux Kernel, Android was built from the ground-up to enable developers 
-                        to create compelling mobile applications that take full advantage of all a handset has to offer.  
-                    </p>
-                </li>
-                <li>
-                    <h3 class="metro-title">All Applications are Equal:</h3>
-                    <p>
-                        Android does not differentiate between the phone's core applications and third-party applications. .
-                        They can all be built to have equal access to a phone's capabilities providing users with a broad spectrum of services.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="metro-title">Overcomes Boundaries:</h3>
-                    <p>
-                        Android allows you to combine information from the Web, directly from your mobile handset and 
-                        corporate sources thereby accelerating the information-gathering process.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="metro-title">Fast and Easy Development:</h3>
-                    <p>
-                        Incorporating a powerful Java engine, Android provides access to a wide range of useful libraries and 
-                        tools that can be used to build rich applications. In addition, it includes a full set of tools that have 
-                        been built from the ground up alongside the platform providing developers with high productivity and deep insight into their applications.
-                    </p>
-                </li>
-            </ul>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var viewName = getQueryParameter("view");
+        changeView(viewName);
+    })
+    function getQueryParameter(key) {
+        key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+        var qs = regex.exec(window.location.href);
+        if (qs == null)
+            return "android";
+        return qs[1];
+    }
+    function changeView(viewId) {
+        $('.top-line').removeClass('active-tab');
+        $('#' + viewId + '-header .top-line').addClass('active-tab');
+        $('#content section').hide();
+        $('#' + viewId).show();
+    }
+</script>
+<div id="header">
+    <div>
+        <div id="android-header">
+            <div class="top-line active-tab" onclick="javascript:changeView('android');">
+                <h1 class="metro-title">
+                    Android</h1>
+            </div>
         </div>
-        <div class="right-section">
-            <h2 class="metro-title">Android Development</h2>
-            <p>
-                With the release of Android SDK, Google has provided developers with an amazing platform to create the next generation of mobile applications. 
-                Android was built from the ground-up to enable developers to create compelling mobile applications that take full advantage of all a handset has to offer.
-            </p>
-            <p>
-                SnowOwl, with its more than a decade of experience in the field of Open Source product development and the technologies involved, is offering 
-                application and game development services for the Android platform.
-            </p>
-            <p>
-                With our experience of developing applications and games in the mobile domain for a global clientele and leveraging upon our extensive understanding 
-                of the contemporary mobile markets, we can assist you right from the initial stages of deciding as to which application can be brought over to the 
-                Android till the application gets listed in the Android market. 
-            </p>
-            <p>
-                If you have your applications or games on other smartphones and are looking at bringing them on to the Android platform, we can help you. 
-                Our team of experienced professionals can assist you in deciding what features of Android can your application leverage upon.
-            </p>
-            <p>
-                We also assist OEMs in porting Android to their hardware devices.
-            </p>
-            <p>
-                Contact us to discuss your development needs for the Android platform.
-            </p>
-            <p>
-                <a href="javascript:showContactUsDialog();" class="metro-button">Contact Us</a>
-            </p>
+        <div style="width: 3%">
+        </div>
+        <div id="wp-header">
+            <div class="top-line" onclick="javascript:changeView('wp');">
+                <h1 class="metro-title">
+                    Windows Phone</h1>
+            </div>
+        </div>
+        <div style="width: 3%">
+        </div>
+        <div id="ios-header">
+            <div class="top-line" onclick="javascript:changeView('ios');">
+                <h1 class="metro-title">
+                    iPhone</h1>
+            </div>
         </div>
     </div>
-</section>
-
-<section id="WindowsPhone" style="height: 1100px;">
-    <div class="top-line">
-        <h1 class="metro-title">Windows Phone</h1>
-    </div>
-    <div class="content-section">
-        <div class="left-section">
-            <h2 class="metro-title">Benefits of Windows Phone</h2>
-            <p>
-                Windows Phone offers a new user interface with its design language named Metro, integrates the operating system with third party and other 
-                Microsoft services, and controls the hardware it runs on. 
-            </p>
-            <p>
-                SnowOwl with its extensive knowledge on developing apps has understood this trend and is highly concentrated on building innovative and 
-                customized apps for this fast emerging platform.
-            </p>
-            <h2 class="metro-title">Features</h2>
-            <ul class="benefits">
-                <li>
-                    <h3 class="metro-title">Flipping Tiles:</h3>
-                    <p>
-                        Flipping tile feature will allow developer not only to pin multiple tiles and deep link them, but can also utilize both sides of every tile. 
-                        The huge advantage of this features are; the first being, It gives developer both sides of the tile providing twice the room to display information. 
-                        Second, is by having two sides of a tile causes the tile to periodically flip on the start screen.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="metro-title">Ease of Fast Application Switching:</h3>
-                    <p>
-                        Fast application switching makes program more user friendly and Microsoft has made it very easy by providing code. 
-                        It comes down to a simple check around tombstoning code to see whether users are coming back from being tombstoned or being suspended.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="metro-title">Multiple Tiles:</h3>
-                    <p>
-                        Tiles are one of WP7’s most unique features and give developers a chance to get the most out of them. 
-                        The Windows Phone allows single application to have multiple tiles. Multiple tiles open all kinds of doors for developers to get creative with their apps. 
-                        From creating deep pins to developing ways for the user to customize their start screen, there are unlimited possibilities.
-                    </p>
-                </li>
-                <li>
-                    <h3 class="metro-title">Deep Link:</h3>
-                    <p>
-                        Developers can now create tiles that deep link into their application. Users can now get right into the most important part of the app with a single touch. 
-                        These tiles provide even more chances for customization of both of the app and the start screen. 
-                        Combining these deep links, with the fact that each app can have multiple tiles and they can all be live, will make people not want to enter your app from the regular tile.
-                    </p>
-                </li>
-            </ul>
+</div>
+<section id="content">
+    <section id="android" style="height: 800px;">
+        <div class="content-section">
+            <div class="left-section">
+                <h2 class="metro-title">
+                    Benefits of Android</h2>
+                <p>
+                    Android is open source and a fully customizable mobile platform. Android offers
+                    a full stack: an operating system, middleware, and key mobile applications.
+                </p>
+                <ul class="benefits">
+                    <li>
+                        <h3 class="metro-title">
+                            Open Platform:</h3>
+                        <p>
+                            Built on the open Linux Kernel, Android was built from the ground-up to enable developers
+                            to create compelling mobile applications that take full advantage of all a handset
+                            has to offer.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="metro-title">
+                            All Applications are Equal:</h3>
+                        <p>
+                            Android does not differentiate between the phone's core applications and third-party
+                            applications. . They can all be built to have equal access to a phone's capabilities
+                            providing users with a broad spectrum of services.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="metro-title">
+                            Overcomes Boundaries:</h3>
+                        <p>
+                            Android allows you to combine information from the Web, directly from your mobile
+                            handset and corporate sources thereby accelerating the information-gathering process.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="metro-title">
+                            Fast and Easy Development:</h3>
+                        <p>
+                            Incorporating a powerful Java engine, Android provides access to a wide range of
+                            useful libraries and tools that can be used to build rich applications. In addition,
+                            it includes a full set of tools that have been built from the ground up alongside
+                            the platform providing developers with high productivity and deep insight into their
+                            applications.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-section">
+                <h2 class="metro-title">
+                    Android Development</h2>
+                <p>
+                    With the release of Android SDK, Google has provided developers with an amazing
+                    platform to create the next generation of mobile applications. Android was built
+                    from the ground-up to enable developers to create compelling mobile applications
+                    that take full advantage of all a handset has to offer.
+                </p>
+                <p>
+                    SnowOwl, with its more than a decade of experience in the field of Open Source product
+                    development and the technologies involved, is offering application and game development
+                    services for the Android platform.
+                </p>
+                <p>
+                    With our experience of developing applications and games in the mobile domain for
+                    a global clientele and leveraging upon our extensive understanding of the contemporary
+                    mobile markets, we can assist you right from the initial stages of deciding as to
+                    which application can be brought over to the Android till the application gets listed
+                    in the Android market.
+                </p>
+                <p>
+                    If you have your applications or games on other smartphones and are looking at bringing
+                    them on to the Android platform, we can help you. Our team of experienced professionals
+                    can assist you in deciding what features of Android can your application leverage
+                    upon.
+                </p>
+                <p>
+                    We also assist OEMs in porting Android to their hardware devices.
+                </p>
+                <p>
+                    Contact us to discuss your development needs for the Android platform.
+                </p>
+                <p>
+                    <a href="javascript:showContactUsDialog();" class="metro-button">Contact Us</a>
+                </p>
+            </div>
         </div>
-        <div class="right-section">
-            <h2 class="metro-title">Windows Phone Development</h2>
-            <p>
-                <b>
-                    Bring your products from iPhone, Andoid, Symbian, BREW, Palm, Windows Mobile, BlackBerry to the Windows Phone!
-                </b>
-            </p>
-            <p>
-                With the advent of Windows Phone, Smartphone market looks fresher and classier. Windows Phone is gaining popularity day by 
-                day and has succeeded in gaining significant market share. It is fast becoming one of the most preferred platform to go for among the smartphone enthusiast.
-            </p>
-            <p>
-                With hands-on experience in developing mobile products for a wide range of global clientele and a thorough understanding of the contemporary 
-                mobile technologies and markets, SnowOwl is now offering application and game development services for Windows Phone.
-            </p>
-            <img src="@Url.Content("~/Content/images/wp.jpg")" style="width: 100%;"/>
-            <p>
-                If you have your application or games on other smartphones and are looking at bringing them on to Windows Phone, get in touch with us. 
-            </p>
-            <p>
-                <a href="javascript:showContactUsDialog();" class="metro-button">Contact Us</a>
-            </p>
+    </section>
+    <section id="wp" style="height: 1100px;">
+        <div class="content-section">
+            <div class="left-section">
+                <h2 class="metro-title">
+                    Benefits of Windows Phone</h2>
+                <p>
+                    Windows Phone offers a new user interface with its design language named Metro,
+                    integrates the operating system with third party and other Microsoft services, and
+                    controls the hardware it runs on.
+                </p>
+                <p>
+                    SnowOwl with its extensive knowledge on developing apps has understood this trend
+                    and is highly concentrated on building innovative and customized apps for this fast
+                    emerging platform.
+                </p>
+                <h2 class="metro-title">
+                    Features</h2>
+                <ul class="benefits">
+                    <li>
+                        <h3 class="metro-title">
+                            Flipping Tiles:</h3>
+                        <p>
+                            Flipping tile feature will allow developer not only to pin multiple tiles and deep
+                            link them, but can also utilize both sides of every tile. The huge advantage of
+                            this features are; the first being, It gives developer both sides of the tile providing
+                            twice the room to display information. Second, is by having two sides of a tile
+                            causes the tile to periodically flip on the start screen.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="metro-title">
+                            Ease of Fast Application Switching:</h3>
+                        <p>
+                            Fast application switching makes program more user friendly and Microsoft has made
+                            it very easy by providing code. It comes down to a simple check around tombstoning
+                            code to see whether users are coming back from being tombstoned or being suspended.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="metro-title">
+                            Multiple Tiles:</h3>
+                        <p>
+                            Tiles are one of WP7’s most unique features and give developers a chance to get
+                            the most out of them. The Windows Phone allows single application to have multiple
+                            tiles. Multiple tiles open all kinds of doors for developers to get creative with
+                            their apps. From creating deep pins to developing ways for the user to customize
+                            their start screen, there are unlimited possibilities.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 class="metro-title">
+                            Deep Link:</h3>
+                        <p>
+                            Developers can now create tiles that deep link into their application. Users can
+                            now get right into the most important part of the app with a single touch. These
+                            tiles provide even more chances for customization of both of the app and the start
+                            screen. Combining these deep links, with the fact that each app can have multiple
+                            tiles and they can all be live, will make people not want to enter your app from
+                            the regular tile.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-section">
+                <h2 class="metro-title">
+                    Windows Phone Development</h2>
+                <p>
+                    <b>Bring your products from iPhone, Andoid, Symbian, BREW, Palm, Windows Mobile, BlackBerry
+                        to the Windows Phone! </b>
+                </p>
+                <p>
+                    With the advent of Windows Phone, Smartphone market looks fresher and classier.
+                    Windows Phone is gaining popularity day by day and has succeeded in gaining significant
+                    market share. It is fast becoming one of the most preferred platform to go for among
+                    the smartphone enthusiast.
+                </p>
+                <p>
+                    With hands-on experience in developing mobile products for a wide range of global
+                    clientele and a thorough understanding of the contemporary mobile technologies and
+                    markets, SnowOwl is now offering application and game development services for Windows
+                    Phone.
+                </p>
+                <img src="@Url.Content("~/Content/images/wp.jpg")" style="width: 100%;"/>
+                <p>
+                    If you have your application or games on other smartphones and are looking at bringing
+                    them on to Windows Phone, get in touch with us.
+                </p>
+                <p>
+                    <a href="javascript:showContactUsDialog();" class="metro-button">Contact Us</a>
+                </p>
+            </div>
         </div>
-    </div>
-</section>
-
-<section id="iPhone" style="height: 700px;">
-    <div class="top-line">
-        <h1 class="metro-title">iPhone</h1>
-    </div>
-    <div class="content-section">
-        <div class="left-section" style="height: 535px;">
-            <h2 class="metro-title">Casual Games for iPhone</h2>
-            <p>
-                Casual gaming is a growing sector of personal entertainment. With the iPhone gaining traction and the growing popularity of the Mac platform, 
-                gaming is actually bigger on the Mac than its ever been.
-            </p>
-            <p>
-                The Casual games market is one of the most dynamic and prospering segments of the computer games industry. According to the 2007, 
-                Casual Games Association report, this market is hauling in $2.25 billion a year and expanding by 20 percent annually driven by the ubiquity of devices like iPhone.
-            </p>
-            <p>
-                The iPhone’s outstanding capabilities like the touch screen feature, 3D processor, three-dimensional accelerometer provides 
-                Consumers with a platform that is conducive for Casual gaming. The richness and quality in graphics which is equivalent to that of a console, 
-                touch screen feature that allows for a different kind of interactivity and the accelerometer that enables to pilot the game horizontally or vertically 
-                are some of the features that provides consumers with a different gaming experience unlike casual games on other phones.
-            </p>
-            <p>
-                If you have a great idea for a game or if you want to bring any of the existing games from other platforms to the iPhone, 
-                Contact us to discuss your iPhone Casual game development needs.
-            </p>      
+    </section>
+    <section id="ios" style="height: 700px;">
+        <div class="content-section">
+            <div class="left-section" style="height: 535px;">
+                <h2 class="metro-title">
+                    Casual Games for iPhone</h2>
+                <p>
+                    Casual gaming is a growing sector of personal entertainment. With the iPhone gaining
+                    traction and the growing popularity of the Mac platform, gaming is actually bigger
+                    on the Mac than its ever been.
+                </p>
+                <p>
+                    The Casual games market is one of the most dynamic and prospering segments of the
+                    computer games industry. According to the 2007, Casual Games Association report,
+                    this market is hauling in $2.25 billion a year and expanding by 20 percent annually
+                    driven by the ubiquity of devices like iPhone.
+                </p>
+                <p>
+                    The iPhone’s outstanding capabilities like the touch screen feature, 3D processor,
+                    three-dimensional accelerometer provides Consumers with a platform that is conducive
+                    for Casual gaming. The richness and quality in graphics which is equivalent to that
+                    of a console, touch screen feature that allows for a different kind of interactivity
+                    and the accelerometer that enables to pilot the game horizontally or vertically
+                    are some of the features that provides consumers with a different gaming experience
+                    unlike casual games on other phones.
+                </p>
+                <p>
+                    If you have a great idea for a game or if you want to bring any of the existing
+                    games from other platforms to the iPhone, Contact us to discuss your iPhone Casual
+                    game development needs.
+                </p>
+            </div>
+            <div class="right-section">
+                <h2 class="metro-title">
+                    Application Development for iPhone</h2>
+                <p>
+                    The iPhone is the fastest growing mobile phone platform in the market today. With
+                    the release of the SDK for iPhone, Apple has provided developers with an amazing
+                    platform for creating the next generation of innovative mobile applications.
+                </p>
+                <p>
+                    SnowOwl with its expertise Mac development, is interested in partnering with innovative
+                    start-ups as well as Fortune 500 companies for developing applications and Casual
+                    games for iPhone and iPod Touch. We also assist companies in bringing their favorite
+                    applications from other smartphones to the iPhone.
+                </p>
+                <p>
+                    We have been at the forefront of Mac development for more than a decade. We have
+                    experience developing a large number of innovative products for the Mac and since
+                    developing for the iPhone is intuitive to a Mac OS developer, we can leverage our
+                    knowledge of Mac OS and drive the next wave of innovation for the iPhone.
+                </p>
+                <p>
+                    If you have your application on other smartphones and are looking at bringing this
+                    application on to the iPhone, we can help you. We assist you in deciding which existing
+                    application from other smartphones can be brought over to the iPhone and what features
+                    of the iPhone can your application leverage upon. We assist you right from the initial
+                    stages of deciding as to which application can be brought over to the iPhone till
+                    the application gets listed in the App Store.
+                </p>
+                <p>
+                    Contact us to discuss your iPhone development needs.
+                </p>
+                <p>
+                    <a href="javascript:showContactUsDialog();" class="metro-button">Contact Us</a>
+                </p>
+            </div>
         </div>
-        <div class="right-section">
-            <h2 class="metro-title">Application Development for iPhone</h2>
-            <p>
-                The iPhone is the fastest growing mobile phone platform in the market today. With the release of the SDK for iPhone, 
-                Apple has provided developers with an amazing platform for creating the next generation of innovative mobile applications.
-            </p>
-            <p>
-                SnowOwl with its expertise Mac development, is interested in partnering with innovative start-ups as well as Fortune 500 companies 
-                for developing applications and Casual games for iPhone and iPod Touch. We also assist companies in bringing their favorite applications from other smartphones to the iPhone.
-            </p> 
-            <p>
-                We have been at the forefront of Mac development for more than a decade. We have experience developing a large number of innovative 
-                products for the Mac and since developing for the iPhone is intuitive to a Mac OS developer, we can leverage our knowledge of Mac OS 
-                and drive the next wave of innovation for the iPhone.
-            </p>
-            <p>
-                If you have your application on other smartphones and are looking at bringing this application on to the iPhone, we can help you. 
-                We assist you in deciding which existing application from other smartphones can be brought over to the iPhone and what features of the 
-                iPhone can your application leverage upon. We assist you right from the initial stages of deciding as to which application can be brought 
-                over to the iPhone till the application gets listed in the App Store.
-            </p>
-            <p>
-                Contact us to discuss your iPhone development needs. 
-            </p>
-            <p>
-                <a href="javascript:showContactUsDialog();" class="metro-button">Contact Us</a>
-            </p>
-        </div>
-    </div>
+    </section>
 </section>
