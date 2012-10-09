@@ -1,6 +1,240 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@model Crasowl.Models.ContactModel
+@{
+    ViewBag.Title = "Crasowl Software Development Company Contact Form";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Contact</h2>
+<style type="text/css">
+    #browse-button
+    {
+        background-image: url('/Content/images/select-file.png');
+        height: 32px;
+        width: 32px;
+        background-repeat: no-repeat;
+        padding: 0;
+        cursor: pointer;
+    }
+    #all-contacts-section
+    {
+        background-position: 0 50px;
+        float: right;
+        height: 448px;
+        background-image: url('images/contacts-back.png');
+        background-repeat: no-repeat;
+        width: 35%;
+        padding: 10px 0 20px 0;
+    }
+    
+    #all-contacts-section ul
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 10px;
+    }
+    #all-contacts-section h2
+    {
+        padding-left: 35px;
+        margin-bottom: 5px;
+        margin-top: 0;
+        color: #F99420;
+    }
+    
+    #all-contacts-section ul li a
+    {
+        padding: 5px 0;
+        color: #006699;
+        text-decoration: none;
+    }
+    #all-contacts-section ul li a:hover
+    {
+        text-decoration: underline;
+        color: #F99420 !important;
+    }
+    #all-contacts-section ul li
+    {
+        padding: 5px 0;
+    }
+    #social-media, #call-us, #write-us
+    {
+        padding: 10px 0 10px 10px;
+        margin-bottom: 10px;
+        background-color: #ddd;
+        border: 1px solid #bbb;
+        border-top: none;
+        width: 205px;
+        float: right;
+        border-top: 3px solid red;
+    }
+    .contact-form
+    {
+        display: table;
+        width: 60%;
+        padding: 0 0 0 40px;
+        margin-left: 10px;
+        font-size: 12pt;
+        color: Black;
+        float: left;
+    }
+    
+    .contact-form div
+    {
+        display: table-row;
+    }
+    
+    .contact-form div div
+    {
+        display: table-cell;
+        padding: 10px 5px;
+    }
+    
+    .psevdoFile
+    {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .psevdoFile input
+    {
+        width: 360px;
+    }
+    
+    .fileInput
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        filter: alpha(opacity:0);
+        font-size: 199px;
+    }
+    .additional-info
+    {
+        height: 130px;
+        resize: none;
+    }
+</style>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<div class="large-header">
+    Contact Us
+</div>
+<div>
+    @using (Html.BeginForm("Contact", "Company", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="contact-form">
+            <div>
+                <div>
+                    Name
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.Name, new { @class = "metro-input" })
+                    @Html.ValidationMessageFor(model => model.Name, string.Empty, new { style = "color:red;" })
+                </div>
+                <div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    Email
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.Email, new { @class = "metro-input" })
+                    @Html.ValidationMessageFor(model => model.Email, string.Empty, new { style = "color:red;" })
+                </div>
+            </div>
+            <div>
+                <div>
+                    Phone
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "metro-input" })
+                </div>
+            </div>
+            <div>
+                <div>
+                    Company
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.CompanyName, new { @class = "metro-input" })
+                </div>
+            </div>
+            <div>
+                <div style="vertical-align: middle;">
+                    Message
+                </div>
+                <div>
+                    @Html.TextAreaFor(model => model.Message, new { @class = "metro-input additional-info", rows = "4" })
+                    @Html.ValidationMessageFor(model => model.Message, string.Empty, new { style = "color:red;" })
+                </div>
+            </div>
+            <div>
+                <div>
+                    Attach file
+                </div>
+                <div style="vertical-align: middle; padding: 0">
+                    <table>
+                        <tr>
+                            <td>
+                                <span class="psevdoFile">
+                                    <input id="psevdoFileValue" class="metro-input" type="text" />
+                                    <input class="fileInput" type="file" size="1" onchange="javascript:document.getElementById('psevdoFileValue').value = this.value"
+                                        name="Attachment" />
+                                </span>
+                            </td>
+                            <td>
+                                <div id="browse-button" onclick="javascript:$('.fileInput').click()">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-size: 10px; color: #aaa">
+                                The file size should not exceed 5 Mb.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <div>
+                </div>
+                <div style="text-align: right;">
+                    <button type="submit" class="metro-button" style="margin-right: 18px;">
+                        Send a message
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="all-contacts-section">
+            <div id="social-media" style="border-top-color: #D8C100">
+                <h2 style="background: url('../../Content/images/follow-icon.png') no-repeat center left;">
+                    Follow Us</h2>
+                <div>
+                    <ul>
+                        <li><a href="http://facebook.com" target="_blank" class="facebook-link">Join us on Facebook</a></li>
+                        <li><a href="http://twitter.com" target="_blank" class="twitter-link">Follow us on twitter</a></li>
+                        <li><a href="http://plus.google.com" target="_blank" class="google-plus-link">Join us
+                            on Google+</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="call-us" style="border-top-color: #0050EF">
+                <h2 style="background: url('../../Content/images/call-icon.png') no-repeat center left;">
+                    Call Us</h2>
+                <ul>
+                    <li><a class="skype-link" href="skype:ask.crasowl?call">ask.crasowl</a> </li>
+                    <li><a href="#" class="call-link">375 29 2755096</a></li>
+                </ul>
+            </div>
+            <div id="write-us" style="border-top-color: #008A00">
+                <h2 style="background: url('../../Content/images/mail-icon.png') no-repeat center left;">
+                    Write Us</h2>
+                <ul>
+                    <li><a href="mailto:ask@crasowl.com">ask@@crasowl.com</a></li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
