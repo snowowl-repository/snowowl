@@ -31,6 +31,9 @@ header div#top-rect { height: 55px; width: 960px;margin:0 auto; background: #282
 #logoContainer, #titles {height: 55px;float: left; cursor: pointer;margin:0;padding:0;}
 #titles h1 { font-size: 26px;margin: 0;color: White;}
 #titles h2 { font-size: 12px; margin: 0; font-style: italic; color: White;}
+.localization{float:right;background-color:#1ba1e2;color:#fff;padding:3px 30px 3px 5px;cursor:pointer;background-image: url('../Content/images/localization.png');
+              background-repeat: no-repeat; background-position:right 2px;}
+.localization:hover,.active-lang{background-color:Teal;}
 
 #banners-area {height: 320px;margin:5px auto 5px auto;}
 .rectangle-tile { background-color: #F4F4F4;border: 1px solid #D6D3D1;border-right: none;

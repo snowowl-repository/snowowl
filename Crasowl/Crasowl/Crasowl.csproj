@@ -99,6 +99,7 @@
     <Content Include="Content\images\list-item-red.png" />
     <Content Include="Content\images\list-item-teal.png" />
     <Content Include="Content\images\list-item.png" />
+    <Content Include="Content\images\localization.png" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\mail-icon.png" />
     <Content Include="Content\images\Maps.png" />
