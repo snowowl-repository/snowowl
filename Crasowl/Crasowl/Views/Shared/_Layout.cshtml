@@ -12,21 +12,20 @@
     <div id="page-wrapper">
         <header>
             <div id="top-rect">
-                <div class="content-wrapper">
-                    @Html.Partial("Partial/_LogoPartial")
-                </div>
+                @Html.Partial("Partial/_LogoPartial")
+                <section class="top-menu">
+                    @Html.Partial("Partial/_TopMenuPartial")
+                </section>
             </div>
         </header>
         <div class="clearing">
         </div>
         <hr style="padding: 0; margin: 0; border-color: Black;" />
-        <section class="top-menu">
-            @Html.Partial("Partial/_TopMenuPartial")
-        </section>
         <div class="content-wrapper">
             @RenderBody()
         </div>
-        <div style="clear:both;"></div>
+        <div style="clear: both;">
+        </div>
         <footer>
             <div id="footerMaster">
                 <div class="content-wrapper" style="height: 230px;">

@@ -26,11 +26,11 @@ textarea { min-height: 75px; }
 
 /* Header Styles
 -----------------------------------------------------------*/
-header div#top-rect { height: 55px; width: 100%; background: #282828;}
-header div#top-rect div.content-wrapper section {position: relative;height: 55px;cursor: pointer;width: 275px;float: left; }
-header div#top-rect div.content-wrapper section img {float: left;max-width: 50px;max-height: 50px;top: 50%;position: absolute;margin-top: -25px;}
-header div#top-rect div.content-wrapper section h3 {margin: 0;padding: 0;color: white;width: 100px;margin-left: 50px;top: 50%;position: absolute;margin-top: -30px;font-size: 25px;}
-header div#top-rect div.content-wrapper section h4 {margin: 0;padding: 0;color: white;top: 50%;position: absolute;margin-left: 50px;}
+header { height: 55px; width: 100%; background: #282828;}
+header div#top-rect { height: 55px; width: 960px;margin:0 auto; background: #282828;}
+#logoContainer, #titles {height: 55px;float: left; cursor: pointer;margin:0;padding:0;}
+#titles h1 { font-size: 26px;margin: 0;color: White;}
+#titles h2 { font-size: 12px; margin: 0; font-style: italic; color: White;}
 
 #banners-area {height: 320px;margin:5px auto 5px auto;}
 .rectangle-tile { background-color: #F4F4F4;border: 1px solid #D6D3D1;border-right: none;
@@ -56,8 +56,8 @@ footer div#copyright { height: 25px; background: #282828; color: #E7E5E5;}
 
 /* Nav Styles
 -----------------------------------------------------------*/
-.top-menu{background: #ccc; height: 30px;}
-.top-menu nav {text-align:right;width:960px;margin:0 auto;}
+.top-menu{background: transparent; height: 30px;padding-top:27px;}
+.top-menu nav {text-align:right;width:960px;margin:0 auto;color:White !important;z-index:9999999;}
 
 /* Section Styles
 -----------------------------------------------------------*/
@@ -160,7 +160,7 @@ nav #menu-bar a
     font-weight: normal;
     font-style: normal;
     font-size: 14px;
-    color: #4f4f4f;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 8px 15px;
@@ -169,7 +169,7 @@ nav #menu-bar a
 .arrow
 {
     background-position: right 8px;
-    background-image: url('images/arrow_down.png');
+    background-image: url('images/arrow-down-white.png');
     background-repeat: no-repeat;
     padding-right: 20px !important;
 }
@@ -183,7 +183,7 @@ nav #menu-bar a
 
 nav #menu-bar .current a, #menu-bar li:hover > a
 {
-    background: #F99420;
+    background: #00ABA9;
     color: #FFFFFF;
 }
 
@@ -207,7 +207,7 @@ nav #menu-bar .submenu
     margin: 0;
     margin-top: -1px;
     padding: 0;
-    border-top: 2px solid #F99420;
+    border-top: 2px solid #00ABA9;
     position: absolute;
     top: 30px;
     left: 0;
