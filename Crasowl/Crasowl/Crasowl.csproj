@@ -77,6 +77,7 @@
     <Content Include="Content\images\arrow-down.png" />
     <Content Include="Content\images\ArrowHead-Right.png" />
     <Content Include="Content\images\arrow_down.png" />
+    <Content Include="Content\images\busy.gif" />
     <Content Include="Content\images\call-icon.png" />
     <Content Include="Content\images\Close.png" />
     <Content Include="Content\images\cms-icon.png" />

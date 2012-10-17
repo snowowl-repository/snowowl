@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Crasowl.Models;
+using System;
 
 namespace Crasowl.Controllers
 {
@@ -13,6 +14,13 @@ namespace Crasowl.Controllers
         public ActionResult About()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult SendMessage(String name, String email, String message)
+        {
+            var ttt = 123 + 434;
+            return null;
         }
 
         public ActionResult Contact()

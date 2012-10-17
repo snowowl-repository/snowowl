@@ -37,6 +37,9 @@
         cursor: pointer;
         opacity: 0.8;
     }
+    .active-tab {
+        border-bottom-color: gray;
+    }
 </style>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -56,13 +59,14 @@
         $('#' + viewId + '-header .top-line').addClass('active-tab');
         $('#content section').hide();
         $('#' + viewId).show();
+        
     }
 </script>
 <div id="header">
     <div>
         <div id="android-header">
             <div class="top-line active-tab" onclick="javascript:changeView('android');">
-                <h1 class="metro-title">
+                <h1 class="metro-title white">
                     Android</h1>
             </div>
         </div>
@@ -70,7 +74,7 @@
         </div>
         <div id="wp-header">
             <div class="top-line" onclick="javascript:changeView('wp');">
-                <h1 class="metro-title">
+                <h1 class="metro-title white">
                     Windows Phone</h1>
             </div>
         </div>
@@ -78,7 +82,7 @@
         </div>
         <div id="ios-header">
             <div class="top-line" onclick="javascript:changeView('ios');">
-                <h1 class="metro-title">
+                <h1 class="metro-title white">
                     iPhone</h1>
             </div>
         </div>

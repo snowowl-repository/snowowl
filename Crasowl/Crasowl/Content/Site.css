@@ -62,6 +62,39 @@ footer div#copyright { height: 25px; background: #282828; color: #E7E5E5;}
 .top-menu{background: transparent; height: 30px;padding-top:27px;}
 .top-menu nav {text-align:right;width:960px;margin:0 auto;color:White !important;z-index:9999999;}
 
+nav #menu-bar {margin: 0;padding: 0;height: 30px;line-height: 100%;border: none;}
+nav #menu-bar li {padding: 0px 0px 6px 0px; float: left; position: relative; list-style: none; }
+nav #menu-bar a { font-weight: normal;font-style: normal; font-size: 14px; color: #fff; text-decoration: none; display: block; padding: 8px 15px; margin: 0;}
+.arrow{background-position: right 8px; background-image: url('images/arrow-down-white.png');  background-repeat: no-repeat; padding-right: 20px !important;}
+nav #menu-bar .current a, #menu-bar li:hover > a { background: #00ABA9; color: #FFFFFF;}
+nav #menu-bar .submenu li:hover a, #menu-bar li:hover li a { background: none; border: none; color: #DBDBDB;}
+nav #menu-bar .submenu a:hover, .social-media ul li a:hover{ text-decoration: underline; color: #F99420 !important;}
+nav #menu-bar .submenu { background: #EEEEEE; display: none; margin: 0; margin-top: -1px; padding: 0; border-top: 2px solid #00ABA9; border-bottom: 2px solid #00ABA9; position: absolute; top: 30px; left: 0; z-index: 999999; text-align: left;}
+nav #menu-bar li:hover > .submenu {display: block;}
+nav #menu-bar li a:hover {}
+nav #menu-bar .submenu li{ float: none; margin: 0; padding: 0;}
+nav #menu-bar .submenu li:first-child > a{}
+nav #menu-bar .submenu li:last-child > a{}
+nav #menu-bar:after{ content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+nav #menu-bar { display: inline-block;}
+html[xmlns] #menu-bar{ display: block;}
+* html #menu-bar{height: 1%;}
+.submenu{padding: 10px 0 !important; background-color: #ccc !important;}
+.submenu li{padding: 0 5px !important;}
+.contact-us-submenu{width: 400px;left: -297px !important;}
+.technologies-submenu{width: 500px; left: -195px !important;}
+.services-submenu{ width: 210px;}
+.submenu-column{ padding: 10px 15px; float: left; font-weight: normal;}
+.submenu-column ul{margin: 0; padding: 0;}
+.submenu-column h2{margin: 0; padding: 10px 0 5px 35px; color: #fff;}
+.submenu h4{padding: 6px 0 6px 25px;margin: 0;}
+.submenu-column a,.submenu a{ padding: 5px;color: #069 !important;}
+.facebook-link{background: url('images/facebook-icon.png') no-repeat !important; padding-left: 30px !important;}
+.twitter-link{background: url('images/twitter-icon.png') no-repeat !important; padding-left: 30px !important;}
+.google-plus-link{background: url('images/google-plus-icon.png') no-repeat !important; padding-left: 30px !important;}
+.skype-link{background: url('images/skype-icon.png') no-repeat !important; padding-left: 30px !important;}
+.call-link{background: url('images/contact.png') no-repeat !important; padding-left: 30px !important; }
+
 /* Section Styles
 -----------------------------------------------------------*/
 section { color: #4F4F4F; width: 100%; height: 250px;}
@@ -136,204 +169,55 @@ h4.metro-title {font-size: 14px;}
 
 /* Styles For Content Layout
 -----------------------------------------------------------*/
-.top-line { width: 100%; }
 section div.top-line h1 { color: white; margin: 0; padding: 0; margin-left: 64px; line-height: 64px;}
+.top-line { width: 100%; }
 .content-section {margin-top: 20px;width: 100%;}
 .left-section {border-right: 1px solid #EAEAEA;float: left;margin-bottom: 20px; padding-left: 3px; padding-right: 35px; width: 45%;}
 .left-section p {float: left;}
 .right-section {float: right;margin-bottom: 20px;padding-left: 35px;width: 45%;padding-right: 10px;}
 .content-section p { text-align: justify; }
 
+/* Styles for contact us dialog form
+-----------------------------------------------------------*/
+div#dialog div#askForm textarea { height: 150px; resize: none; }
+div#dialog div#askForm .inputbox, 
+div#dialog div#askForm input[type="text"], 
+div#dialog div#askForm input[type="password"],
+div#dialog div#askForm input[type="email"], 
+div#dialog div#askForm textarea {
+        background: transparent;
+        border: 1px solid #DDD;
+        color: #DDD;
+        margin: 10px;
+        padding: 10px;
+        display: block;
+        min-width: 250px;
+        width: 90%;
+    }
+div#dialog div#askForm input[type="submit"] {
+        background: #F99420;
+        border: 0 none;
+        color: white;
+        display: inline-block;
+        font-family: 'NovecentowideUltraLightBold';
+        margin: 0px 4px 3px 0px;
+        padding: 8px 10px;
+        cursor: pointer;
+        overflow: visible;
+        min-width: 100px;
+        float: right;
+        margin-right: -30px;
+    }
+div#dialog div#askForm .field-validation-error {
+        margin-left: 10px;
+        color: red;
+    }
+div#dialog div#askForm input[type="submit"]:hover { background: #565656; }
+div#dialog div#askForm form {
+        width: 300px;
+        height: 500px;
+    }
+
 /* ETC
 -----------------------------------------------------------*/
 .white { color: #FFFFFF; }
-
-nav #menu-bar {margin: 0;padding: 0;height: 30px;line-height: 100%;border: none;}
-
-nav #menu-bar li
-{
-    padding: 0px 0px 6px 0px;
-    float: left;
-    position: relative;
-    list-style: none;
-}
-
-nav #menu-bar a
-{
-    font-weight: normal;
-    font-style: normal;
-    font-size: 14px;
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    padding: 8px 15px;
-    margin: 0;
-}
-.arrow
-{
-    background-position: right 8px;
-    background-image: url('images/arrow-down-white.png');
-    background-repeat: no-repeat;
-    padding-right: 20px !important;
-}
-
-nav #menu-bar .current a, #menu-bar li:hover > a
-{
-    background: #00ABA9;
-    color: #FFFFFF;
-}
-
-nav #menu-bar .submenu li:hover a, #menu-bar li:hover li a
-{
-    background: none;
-    border: none;
-    color: #DBDBDB;
-}
-
-nav #menu-bar .submenu a:hover, .social-media ul li a:hover
-{
-    text-decoration: underline;
-    color: #F99420 !important;
-}
-
-nav #menu-bar .submenu
-{
-    background: #EEEEEE;
-    display: none;
-    margin: 0;
-    margin-top: -1px;
-    padding: 0;
-    border-top: 2px solid #00ABA9;
-    border-bottom: 2px solid #00ABA9;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    z-index: 999999;
-    text-align: left;
-}
-
-nav #menu-bar li:hover > .submenu
-{
-    display: block;
-}
-nav #menu-bar li a:hover
-{
-}
-
-nav #menu-bar .submenu li
-{
-    float: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav #menu-bar .submenu li:first-child > a
-{
-}
-
-nav #menu-bar .submenu li:last-child > a
-{
-}
-
-nav #menu-bar:after
-{
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-nav #menu-bar
-{
-    display: inline-block;
-}
-
-html[xmlns] #menu-bar
-{
-    display: block;
-}
-
-* html #menu-bar
-{
-    height: 1%;
-}
-.submenu
-{
-    padding: 10px 0 !important;
-    background-color: #ccc !important;
-    
-}
-.submenu li
-{
-    padding: 0 5px !important;
-}
-.contact-us-submenu
-{
-    width: 400px;
-    left: -297px !important;
-}
-
-.technologies-submenu
-{
-    width: 500px;
-    left: -195px !important;
-}
-.services-submenu
-{
-    width: 210px;
-}
-.submenu-column
-{
-    padding: 10px 15px;
-    float: left;
-    font-weight: normal;
-}
-.submenu-column ul
-{
-    margin: 0;
-    padding: 0;
-}
-.submenu-column h2
-{
-    margin: 0;
-    padding: 10px 0 5px 35px;
-    color: #fff;
-}
-.submenu h4
-{
-    padding: 6px 0 6px 25px;
-    margin: 0;
-}
-.submenu-column a,.submenu a
-{
-    padding: 5px;
-    color: #069 !important;
-}
-.facebook-link
-{
-    background: url('images/facebook-icon.png') no-repeat !important;
-    padding-left: 30px !important;
-}
-.twitter-link
-{
-    background: url('images/twitter-icon.png') no-repeat !important;
-    padding-left: 30px !important;
-}
-.google-plus-link
-{
-    background: url('images/google-plus-icon.png') no-repeat !important;
-    padding-left: 30px !important;
-}
-.skype-link
-{
-    background: url('images/skype-icon.png') no-repeat !important;
-    padding-left: 30px !important;
-}
-.call-link
-{
-    background: url('images/contact.png') no-repeat !important;
-    padding-left: 30px !important;
-    }
-
