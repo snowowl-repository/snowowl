@@ -246,7 +246,7 @@
     <Content Include="Views\Company\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Company\Contact.cshtml" />
+    <Content Include="Views\Company\ExtendedContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Company\Carrers.cshtml" />
