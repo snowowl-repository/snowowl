@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Crasowl.Code;
 using Crasowl.Models;
 using System;
 
@@ -16,24 +17,22 @@ namespace Crasowl.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult SendMessage(String name, String email, String message)
-        {
-            var ttt = 123 + 434;
-            return null;
-        }
-
         public ActionResult Contact()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult Contact(ContactModel model)
         {
             if (!ModelState.IsValid)
                 return View(model);
-            //TODO: place to send mail
-            return View();
+            bool isSended = Mailer.SendContactUsMail(model);
+
+            string result = isSended
+                                ? "Your request has been successfully sent. Our manager contact you as soon as possible."
+                                : "Your request hasn't been sent.Please, try again...";
+            return Content(result);
         }
 
         public ActionResult Carrers()

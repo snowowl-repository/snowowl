@@ -67,14 +67,14 @@
         debugger;
         if (isValidateForm(n,e,m)) {
             $.post(
-                '@Url.Action("SendMessage", "Company")',
+                '@Url.Action("Contact", "Company")',
                 {
-                    name: n,
-                    email: e,
-                    message: m
+                    Name: n,
+                    Email: e,
+                    Message: m
                 },
-                function() {
-                    alert('Finished');
+                function(result) {
+                    alert(result);
                 }
             );
         }

@@ -62,6 +62,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Code\Mailer.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\DevelopmentController.cs" />
     <Compile Include="Global.asax.cs">
