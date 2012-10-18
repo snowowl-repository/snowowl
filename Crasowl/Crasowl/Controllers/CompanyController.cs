@@ -26,14 +26,16 @@ namespace Crasowl.Controllers
         [HttpPost]
         public ActionResult Contact(ContactModel model)
         {
+            //TODO: need move strings to resource files and wrap result to object
             if (!ModelState.IsValid)
-                return Content("Your request hasn't been sent.Please, try again...");
+                return Content("{\"isSuccess\": false,\"message\": \"Your request has not been sent.Please, try again...\"}");
             bool isSended = Mailer.SendContactUsMail(model);
 
             string result = isSended
                                 ? "Your request has been successfully sent. Our manager contact you as soon as possible."
                                 : "Your request hasn't been sent.Please, try again...";
-            return Content(result);
+
+            return Content(string.Format("{{\"isSuccess\": {0}, \"message\": \"{1}\"}}", isSended.ToString().ToLower(), result));
         }
 
         [HttpPost]

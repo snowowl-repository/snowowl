@@ -73,8 +73,12 @@
                     Email: e,
                     Message: m
                 },
-                function(result) {
-                    alert(result);
+                function (result) {
+                    var obj = $.parseJSON(result)
+                    alert(obj.isSuccess + ' - ' + obj.message);
+
+                    if (obj.isSuccess == false)
+                        alert('fuck');
                 }
             );
         }
