@@ -27,13 +27,15 @@ namespace Crasowl.Controllers
         public ActionResult Contact(ContactModel model)
         {
             //TODO: need move strings to resource files and wrap result to object
-            if (!ModelState.IsValid)
-                return Content("{\"isSuccess\": false,\"message\": \"Your request has not been sent.Please, try again...\"}");
-            bool isSended = Mailer.SendContactUsMail(model);
-
+            var isSended = false;
+            if (!ModelState.IsValid) return Content("{\"isSuccess\": false,\"message\": \"Your request has not been sent.Please, try again...\"}");
+            
+            try { isSended = Mailer.SendContactUsMail(model); }
+            catch { if (!ModelState.IsValid) return Content("{\"isSuccess\": false,\"message\": \"Your request has not been sent.Please, try again...\"}"); }
+            
             string result = isSended
-                                ? "Your request has been successfully sent. Our manager contact you as soon as possible."
-                                : "Your request hasn't been sent.Please, try again...";
+                                   ? "Your request has been successfully sent. Our manager contact you as soon as possible."
+                                   : "Your request hasn't been sent. Please, try again...";
 
             return Content(string.Format("{{\"isSuccess\": {0}, \"message\": \"{1}\"}}", isSended.ToString().ToLower(), result));
         }
